@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import videoBg from "../assets/videoBg.mp4";
 
 const Hero = () => {
@@ -19,17 +19,35 @@ const Hero = () => {
     }
   };
 
+  useEffect(() => {
+    const setVideoControls = () => {
+      if (window.innerWidth <= 768) {
+        videoRef.current.setAttribute("controls", "controls");
+      } else {
+        videoRef.current.removeAttribute("controls");
+      }
+    };
+
+    setVideoControls();
+    window.addEventListener("resize", setVideoControls);
+
+    // Cleanup function to remove the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("resize", setVideoControls);
+    };
+  }, []);
+
   return (
     <div className="w-[100vw] lg:w-[90vw] h-full overflow-hidden mx-auto">
       <video
         className="object-cover"
         src={videoBg}
-        onClick={handleVideoClick}
         autoPlay
         loop
         muted
         playsInline
         ref={videoRef}
+        onClick={handleVideoClick}
       />
       <p className="md:hidden text-center text-gray-500">*Tap video for full screen</p>
     </div>
