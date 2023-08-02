@@ -62,7 +62,7 @@ const Hero = () => {
         <div
           ref={overlayRef}
           onClick={handleVideoClick}
-          className="cursor-default absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0 transition-opacity duration-300">
+          className="hidden md:block cursor-default absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0 transition-opacity duration-300">
           <p className="text-white text-6xl bg-transparent px-4 py-2">Tap to expand</p>
         </div>
       </div>
