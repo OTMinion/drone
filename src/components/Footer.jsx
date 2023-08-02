@@ -9,12 +9,13 @@ const Footer = () => {
       </div>
 
       <div className="flex text-center text-sm justify-center items-center md:-ml-6">
-        AERIALJOHNNY IS CAA AND FULLY INSURED FPV AND COMMERCIAL DRONE PILOT OPERATING IN ESSEX AND
-        LONDON.
+        STEVE IS CAA AND FULLY INSURED FPV AND COMMERCIAL DRONE PILOT OPERATING IN ESSEX AND LONDON.
       </div>
 
-      <div className="flex justify-center items-center ml-4 text-sm">
-        JOHNATHAN@AERIALJOHNNY.CO.UK
+      <div className="flex flex-col justify-center items-center ml-4 text-md">
+        <p>Steve@CinematicFPV.co.uk</p>
+        <hr className="border-t border-gray-300 my-1 w-[90%] mx-auto" />
+        <p>+44 7968 033307</p>
       </div>
 
       <div className="flex md:w-[90%] my-6 justify-between items-center ml-5">
