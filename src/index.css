@@ -11,6 +11,3 @@ li:hover {
 }
 
 /* Add this CSS in your stylesheets */
-.grayScale {
-  filter: grayscale(60%);
-}

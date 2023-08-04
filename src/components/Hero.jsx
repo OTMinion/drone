@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from "react";
 import videoBg from "../assets/videoBg.mp4";
-import "../index.css"; // Import the CSS file with the "grayScale" class
 import ReactPlayer from "react-player";
 
 const Hero = () => {
@@ -18,10 +17,12 @@ const Hero = () => {
 
     const handleMouseEnter = () => {
       overlayElement.style.opacity = "1";
+      wrapperElement.style.filter = "grayscale(50%)"; // Add the 'grayScale' style on hover
     };
 
     const handleMouseLeave = () => {
       overlayElement.style.opacity = "0";
+      wrapperElement.style.filter = "none"; // Remove the 'grayScale' style on mouse leave
     };
 
     wrapperElement.addEventListener("mouseenter", handleMouseEnter);
