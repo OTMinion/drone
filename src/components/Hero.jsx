@@ -47,7 +47,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="relative w-[100vw] h-full overflow-hidden mx-auto">
+    <div className=" w-[100vw] h-full overflow-hidden mx-auto md:relative">
       <div ref={wrapperRef}>
         <video
           className="object-cover"
@@ -55,7 +55,6 @@ const Hero = () => {
           autoPlay
           loop
           muted
-          playsInline
           ref={videoRef}
           onClick={handleVideoClick}
         />
