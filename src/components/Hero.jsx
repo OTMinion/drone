@@ -35,8 +35,8 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="w-[100vw] h-full overflow-hidden mx-auto md:relative">
-      <div className="relative" ref={wrapperRef}>
+    <div className=" w-[100vw] h-full overflow-hidden mx-auto md:relative">
+      <div ref={wrapperRef}>
         <ReactPlayer
           className="object-cover"
           url={videoBg}
@@ -57,10 +57,6 @@ const Hero = () => {
         </div>
       </div>
       <p className="md:hidden text-center text-gray-500">*Tap video for full screen</p>
-
-      <style jsx>{`
-        /* ... existing styles ... */
-      `}</style>
     </div>
   );
 };
