@@ -1,36 +1,6 @@
 import { FaFacebookSquare, FaInstagram, FaTwitterSquare } from "react-icons/fa";
 import Logo from "../assets/logo.png";
-
-// Helper function to encode the email
-const encodeEmail = () => {
-  const emailParts = [
-    "S",
-    "t",
-    "e",
-    "v",
-    "e",
-    "@",
-    "C",
-    "i",
-    "n",
-    "e",
-    "m",
-    "a",
-    "t",
-    "i",
-    "c",
-    "F",
-    "P",
-    "V",
-    ".",
-    "c",
-    "o",
-    ".",
-    "u",
-    "k",
-  ];
-  return emailParts.join("");
-};
+import email from "../assets/email.png";
 
 const Footer = () => {
   return (
@@ -44,18 +14,23 @@ const Footer = () => {
       </div>
 
       <div className="flex flex-col justify-center items-center ml-4 text-md">
-        {/* Render the encoded email as a mailto link */}
-        <p>
-          <a href={`mailto:${encodeEmail()}`}>{encodeEmail()}</a>
-        </p>
+        {/* Use an onClick handler to open the mail client */}
+        <a
+          href="#"
+          onClick={(e) => {
+            e.preventDefault();
+            window.location.href = "mailto:Steve@CinematicFPV.co.uk";
+          }}>
+          <img src={email} alt="Email us" className="w-[100%] h-[70%] mt-4 -mb-2" />
+        </a>
         <hr className="border-t border-gray-300 my-1 w-[90%] mx-auto" />
         <p>+44 7968 033307</p>
       </div>
 
       <div className="flex md:w-[90%] my-6 justify-between items-center ml-5">
-        <FaFacebookSquare size={50} />
-        <FaInstagram size={50} />
-        <FaTwitterSquare size={50} />
+        <FaFacebookSquare size={50} className="hover:text-blue-500" />
+        <FaInstagram size={50} className="hover:text-red-500" />
+        <FaTwitterSquare size={50} className="hover:text-blue-500" />
       </div>
     </div>
   );

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import videoBg from "../assets/videoBg.mp4";
 import ReactPlayer from "react-player";
 
@@ -35,8 +35,8 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className=" w-[100vw] h-full overflow-hidden mx-auto md:relative">
-      <div ref={wrapperRef}>
+    <div className="w-[100vw] h-full overflow-hidden mx-auto md:relative">
+      <div className="relative" ref={wrapperRef}>
         <ReactPlayer
           className="object-cover"
           url={videoBg}
@@ -57,6 +57,10 @@ const Hero = () => {
         </div>
       </div>
       <p className="md:hidden text-center text-gray-500">*Tap video for full screen</p>
+
+      <style jsx>{`
+        /* ... existing styles ... */
+      `}</style>
     </div>
   );
 };
