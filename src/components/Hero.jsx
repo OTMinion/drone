@@ -1,40 +1,27 @@
 import React, { useEffect, useRef } from "react";
 import videoBg from "../assets/videoBg.mp4";
 import "../index.css"; // Import the CSS file with the "grayScale" class
+import ReactPlayer from "react-player";
 
 const Hero = () => {
-  const videoRef = useRef();
+  const playerRef = useRef();
   const wrapperRef = useRef();
   const overlayRef = useRef();
 
   const handleVideoClick = () => {
-    if (videoRef.current.requestFullscreen) {
-      videoRef.current.requestFullscreen();
-    } else if (videoRef.current.mozRequestFullScreen) {
-      // Firefox
-      videoRef.current.mozRequestFullScreen();
-    } else if (videoRef.current.webkitRequestFullscreen) {
-      // Chrome, Safari & Opera
-      videoRef.current.webkitRequestFullscreen();
-    } else if (videoRef.current.msRequestFullscreen) {
-      // IE/Edge
-      videoRef.current.msRequestFullscreen();
-    }
+    playerRef.current.getInternalPlayer().webkitEnterFullscreen();
   };
 
   useEffect(() => {
-    const videoElement = videoRef.current;
     const wrapperElement = wrapperRef.current;
     const overlayElement = overlayRef.current;
 
     const handleMouseEnter = () => {
       overlayElement.style.opacity = "1";
-      videoElement.classList.add("grayScale"); // Add the 'grayScale' class on hover
     };
 
     const handleMouseLeave = () => {
       overlayElement.style.opacity = "0";
-      videoElement.classList.remove("grayScale"); // Remove the 'grayScale' class on mouse leave
     };
 
     wrapperElement.addEventListener("mouseenter", handleMouseEnter);
@@ -49,14 +36,17 @@ const Hero = () => {
   return (
     <div className=" w-[100vw] h-full overflow-hidden mx-auto md:relative">
       <div ref={wrapperRef}>
-        <video
+        <ReactPlayer
           className="object-cover"
-          src={videoBg}
-          autoPlay
+          url={videoBg}
+          playing
           loop
           muted
-          ref={videoRef}
+          width="100%"
+          height="100%"
+          ref={playerRef}
           onClick={handleVideoClick}
+          playsinline
         />
         <div
           ref={overlayRef}
