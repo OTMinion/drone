@@ -21,7 +21,7 @@ const Footer = () => {
             e.preventDefault();
             window.location.href = "mailto:Steve@CinematicFPV.co.uk";
           }}>
-          <img src={email} alt="Email us" className="w-[100%] h-[70%] mt-4 -mb-2" />
+          <img src={email} alt="Email us" className="w-[100%] h-[70%] mt-4 -mb-3" />
         </a>
         <hr className="border-t border-gray-300 my-1 w-[90%] mx-auto" />
         <p>+44 7968 033307</p>

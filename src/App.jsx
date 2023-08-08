@@ -2,6 +2,7 @@ import NavBar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Footer from "./components/Footer";
 import About from "./components/About";
+import Legal from "./components/Legal";
 
 const App = () => {
   return (
@@ -10,6 +11,7 @@ const App = () => {
       <Hero />
       <About />
       <Footer />
+      <Legal />
     </div>
   );
 };

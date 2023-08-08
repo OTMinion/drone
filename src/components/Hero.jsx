@@ -35,7 +35,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className=" w-[100vw] h-full overflow-hidden mx-auto md:relative">
+    <div className=" pt-72 md:py-0 w-[100vw] h-full overflow-hidden mx-auto md:relative px-5">
       <div ref={wrapperRef}>
         <ReactPlayer
           className="object-cover"
@@ -53,10 +53,12 @@ const Hero = () => {
           ref={overlayRef}
           onClick={handleVideoClick}
           className="hidden md:block cursor-default absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0 transition-opacity duration-300">
-          <p className="text-white text-6xl bg-transparent px-4 py-2">Tap to expand</p>
+          <p className="text-white text-6xl bg-transparent px-4 py-2">Click for full screen</p>
         </div>
       </div>
-      <p className="md:hidden text-center text-gray-500">*Tap video for full screen</p>
+      <p className="md:hidden text-center text-gray-500">
+        *Tap video and turn sideways for full screen
+      </p>
     </div>
   );
 };
