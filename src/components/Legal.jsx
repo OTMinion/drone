@@ -15,28 +15,29 @@ const Legal = () => {
   return (
     <div>
       <hr className="border-t border-gray-400 w-[100%] mx-auto" />
-      <div className="flex justify-between px-2 md:px-80 pt-5 mb-10 text-gray-400">
-        <p className="w-1/4 md:w-2/4 ">Copyright © 2022 Cinematic FPV. All rights reserved</p>
+      <div className="flex justify-between px-2 md:px-32 pt-5 mb-10 text-gray-400 flex-col md:flex-row text-center">
         <p
           onClick={toggleTerms}
-          className="cursor-pointer hover:font-bold hover:text-black transition-all duration-300 w-1.8/4">
+          className="cursor-pointer hover:underline hover:text-black transition-all duration-300">
           Terms and Conditions
         </p>
         <p
           onClick={togglePolicy}
-          className="cursor-pointer hover:font-bold hover:text-black transition-all duration-300 w-1/4 pl-7">
+          className="cursor-pointer hover:underline hover:text-black transition-all duration-300 pt-3 pb-8 md:py-0">
           Privacy Policy
         </p>
+        <p className=" ">Copyright © 2022 Cinematic FPV. All rights reserved</p>
       </div>
       {showTerms && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
           <div className="bg-white w-[90%] h-[90%]  p-8 relative">
             <button
               onClick={toggleTerms}
-              className="absolute top-10 right-10 md:right-24 cursor-pointer ">
+              className="absolute top-10 right-10 md:right-24 cursor-pointer border border-gray-400 rounded-full px-8 py-2">
               Close
             </button>
-            <h1 className="text-2xl md:text-3xl text-center fixed ">Terms and Conditions</h1>
+
+            <h1 className="text-2xl md:text-3xl text-center fixed pt-3">Terms and Conditions</h1>
           </div>
 
           <div className="overflow-auto w-[90%] h-[73%] mt-14 px-8 absolute">
@@ -621,10 +622,11 @@ const Legal = () => {
           <div className="bg-white w-[90%] h-[90%]  p-8 relative">
             <button
               onClick={togglePolicy}
-              className="absolute top-10 right-10 md:right-24 cursor-pointer">
+              className="absolute top-10 right-10 md:right-24 cursor-pointer border border-gray-400 rounded-full px-8 py-2">
               Close
             </button>
-            <h1 className="text-3xl text-center fixed">Privacy Policy</h1>
+
+            <h1 className="text-3xl text-center fixed pt-3">Privacy Policy</h1>
             <div className="overflow-auto w-[90%] h-[73%] mt-14 px-8 absolute">
               {/* Add your Privacy Policy content here */}
             </div>

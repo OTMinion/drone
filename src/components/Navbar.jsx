@@ -32,8 +32,7 @@ const NavBar = () => {
     setNav(!nav);
   };
 
-  let navbarClasses =
-    windowWidth < 640 ? "fixed w-full z-50 bg-white transition-all duration-700" : "";
+  let navbarClasses = "w-full z-50 bg-white transition-all duration-700 fixed";
   let navbarStyle =
     windowWidth < 640
       ? {
@@ -54,9 +53,9 @@ const NavBar = () => {
 
   return (
     <div className={navbarClasses} style={navbarStyle}>
-      <div className="flex items-center h-30 w-full mx-auto px-4 text-black md:hidden">
+      <div className="flex items-center h-28 w-full mx-auto px-4 text-black md:hidden pb-4">
         <a href="/">
-          <img src={Logo} alt="logo" className="w-48 h-30 -mt-2 -ml-4" style={logoStyle} />
+          <img src={Logo} alt="logo" className="w-48 h-30  -ml-4" style={logoStyle} />
         </a>
 
         <div onClick={handleNav} className="absolute right-6  ">
@@ -64,112 +63,99 @@ const NavBar = () => {
         </div>
       </div>
 
-      {scrollPosition <= 170 && (
-        <div className="text-center md:hidden mx-5">
-          <hr className="border-t border-gray-400 my-10 w-[100%] -mt-4" />
-          <h1 className="text-3xl -mt-6 mb-3 text-blue-500">SPECIALISED DRONE FILMING</h1>
-        </div>
-      )}
-
       <div className="hidden md:flex items-center h-30 w-full mx-auto px-4 text-black">
         <div className="md:w-1/6">
           <a href="/">
-            <img src={Logo} alt="logo" className="w-48 h-30 -mt-1 -ml-4" />
+            <img src={Logo} alt="logo" className="w-48 h-[140px] -mt-1 -ml-4" />
           </a>
         </div>
 
-        <div className="w-4/6 text-center">
-          <h1 className="text-md md:text-5xl text-blue-500 -mx-5">SPECIALISED DRONE FILMING</h1>
+        <div className="w-4/6 text-left">
+          <h1 className="text-md md:text-5xl text-blue-500 -mx-5 text-center">
+            SPECIALISED DRONE FILMING
+          </h1>
           <ul className="hidden md:flex justify-center">
             <div className="group inline-block relative z-10">
-              <li className="p-4 hover:underline cursor-pointer">Drone Videos</li>
+              <li className="p-4 hover:underline cursor-pointer">Services</li>
               <div className="absolute hidden group-hover:block  w-48">
                 <div className="py-2 px-3 rounded bg-white shadow z-20">
                   <a href="#" className="block py-2 px-4 hover:bg-gray-200">
-                    Dropdown Item 1
+                    Traditional drone filming
                   </a>
                   <a href="#" className="block py-2 px-4 hover:bg-gray-200">
-                    Dropdown Item 2
+                    FPV Drone Filming
                   </a>
                   <a href="#" className="block py-2 px-4 hover:bg-gray-200">
-                    Dropdown Item 3
+                    For Production Companies
+                  </a>
+                  <a href="#" className="block py-2 px-4 hover:bg-gray-200">
+                    Film & TV
+                  </a>
+                  <a href="#" className="block py-2 px-4 hover:bg-gray-200">
+                    Events
+                  </a>
+                  <a href="#" className="block py-2 px-4 hover:bg-gray-200">
+                    Drone Tours & Fly-Throughs
+                  </a>
+                  <a href="#" className="block py-2 px-4 hover:bg-gray-200">
+                    Real Estate
                   </a>
                 </div>
               </div>
             </div>
 
             <div className="group inline-block relative z-10">
-              <li className="p-4 hover:underline cursor-pointer">Drone Videos</li>
+              <li className="p-4 hover:underline cursor-pointer">Courses</li>
               <div className="absolute hidden group-hover:block  w-48">
                 <div className="py-2 px-3 rounded bg-white shadow z-20">
-                  <a href="#" className="block py-2 px-4 hover:bg-gray-200">
-                    Dropdown Item 1
-                  </a>
-                  <a href="#" className="block py-2 px-4 hover:bg-gray-200">
-                    Dropdown Item 2
-                  </a>
-                  <a href="#" className="block py-2 px-4 hover:bg-gray-200">
-                    Dropdown Item 3
+                  <a href="#" className="block py-4 hover:bg-gray-200">
+                    Drone Day Workshop (for education)
                   </a>
                 </div>
               </div>
             </div>
 
             <div className="group inline-block relative z-10">
-              <li className="p-4 hover:underline cursor-pointer">Drone Videos</li>
+              <li className="p-4 hover:underline cursor-pointer">Gallery</li>
               <div className="absolute hidden group-hover:block  w-48">
                 <div className="py-2 px-3 rounded bg-white shadow z-20">
                   <a href="#" className="block py-2 px-4 hover:bg-gray-200">
-                    Dropdown Item 1
+                    Videos
                   </a>
                   <a href="#" className="block py-2 px-4 hover:bg-gray-200">
-                    Dropdown Item 2
-                  </a>
-                  <a href="#" className="block py-2 px-4 hover:bg-gray-200">
-                    Dropdown Item 3
+                    Photos
                   </a>
                 </div>
               </div>
             </div>
 
             <div className="group inline-block relative z-10">
-              <li className="p-4 hover:underline cursor-pointer">Drone Videos</li>
+              <li className="p-4 hover:underline cursor-pointer">Articles</li>
+            </div>
+
+            <div className="group inline-block relative z-10">
+              <li className="p-4 hover:underline cursor-pointer">About Us</li>
               <div className="absolute hidden group-hover:block mt-1 w-48">
                 <div className="py-2 px-3 rounded bg-white shadow z-20">
                   <a href="#" className="block py-2 px-4 hover:bg-gray-200">
-                    Dropdown Item 1
+                    About Us
                   </a>
                   <a href="#" className="block py-2 px-4 hover:bg-gray-200">
-                    Dropdown Item 2
-                  </a>
-                  <a href="#" className="block py-2 px-4 hover:bg-gray-200">
-                    Dropdown Item 3
+                    Meet the team
                   </a>
                 </div>
               </div>
             </div>
 
             <div className="group inline-block relative z-10">
-              <li className="p-4 hover:underline cursor-pointer">Drone Videos</li>
-              <div className="absolute hidden group-hover:block  w-48">
-                <div className="py-2 px-3 rounded bg-white shadow z-20">
-                  <a href="#" className="block py-2 px-4 hover:bg-gray-200">
-                    Dropdown Item 1
-                  </a>
-                  <a href="#" className="block py-2 px-4 hover:bg-gray-200">
-                    Dropdown Item 2
-                  </a>
-                  <a href="#" className="block py-2 px-4 hover:bg-gray-200">
-                    Dropdown Item 3
-                  </a>
-                </div>
-              </div>
+              <li className="p-4 hover:underline cursor-pointer">Contact Us</li>
             </div>
           </ul>
         </div>
 
         <div className="w-1/6">{/* Removed AiOutlineMenu from here */}</div>
       </div>
+      <hr className="border-t border-gray-500 w-[93%] md:w-[98%] mx-5 " />
 
       <div
         className={
