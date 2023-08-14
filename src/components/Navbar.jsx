@@ -9,7 +9,6 @@ const NavBar = () => {
   const [open2, setOpen2] = useState(false);
   const [open3, setOpen3] = useState(false);
   const [open4, setOpen4] = useState(false);
-  const [open5, setOpen5] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -36,18 +35,39 @@ const NavBar = () => {
   let navbarStyle =
     windowWidth < 640
       ? {
-          paddingTop: scrollPosition > 50 ? "0px" : "30px",
-          paddingBottom: scrollPosition > 50 ? "0px" : "10px",
+          paddingTop:
+            scrollPosition > 100
+              ? "0px"
+              : scrollPosition > 50
+              ? "10px"
+              : scrollPosition > 10
+              ? "20px"
+              : "30px",
+          paddingBottom: scrollPosition > 100 ? "0px" : "10px",
         }
       : {};
 
   let logoStyle =
     windowWidth < 640
       ? {
-          width: scrollPosition > 50 ? "150px " : "200px",
-          height: scrollPosition > 50 ? "100px" : "150px",
-          paddingTop: scrollPosition > 50 ? "5px" : "0px",
-          transition: "all 0.3s ease-in-out",
+          width:
+            scrollPosition > 100
+              ? "150px"
+              : scrollPosition > 50
+              ? "170px"
+              : scrollPosition > 10
+              ? "190px"
+              : "200px",
+          height:
+            scrollPosition > 100
+              ? "100px"
+              : scrollPosition > 50
+              ? "120px"
+              : scrollPosition > 10
+              ? "140px"
+              : "150px",
+          paddingTop: scrollPosition > 100 ? "15px" : "0px",
+          transition: "all 0.8s ease-in-out",
         }
       : {};
 
@@ -166,19 +186,31 @@ const NavBar = () => {
         <ul className="uppercase p-4 text-black flex flex-col">
           <div className="inline-block relative z-10">
             <li onClick={() => setOpen1(!open1)} className="p-4 cursor-pointer">
-              Drone Videos
+              Services
             </li>
             {open1 && (
               <div className="w-80">
                 <div className="py-2 pl-10 rounded bg-white z-20 text-gray-600">
-                  <a href="#" className="block py-2 px-4 ">
-                    Dropdown Item 1
+                  <a href="#" className="block py-2 px-4">
+                    Traditional drone filming
                   </a>
-                  <a href="#" className="block py-2 px-4 ">
-                    Dropdown Item 2
+                  <a href="#" className="block py-2 px-4">
+                    FPV Drone Filming
                   </a>
-                  <a href="#" className="block py-2 px-4 ">
-                    Dropdown Item 3
+                  <a href="#" className="block py-2 px-4">
+                    For Production Companies
+                  </a>
+                  <a href="#" className="block py-2 px-4">
+                    Film & TV
+                  </a>
+                  <a href="#" className="block py-2 px-4">
+                    Events
+                  </a>
+                  <a href="#" className="block py-2 px-4">
+                    Drone Tours & Fly-Throughs
+                  </a>
+                  <a href="#" className="block py-2 px-4">
+                    Real Estate
                   </a>
                 </div>
               </div>
@@ -187,19 +219,13 @@ const NavBar = () => {
 
           <div className="inline-block relative z-10">
             <li onClick={() => setOpen2(!open2)} className="p-4 cursor-pointer">
-              Drone Photos
+              Courses
             </li>
             {open2 && (
               <div className="w-80">
                 <div className="py-2 pl-10 rounded bg-white z-20 text-gray-600">
-                  <a href="#" className="block py-2 px-4 ">
-                    Dropdown Item 1
-                  </a>
-                  <a href="#" className="block py-2 px-4 ">
-                    Dropdown Item 2
-                  </a>
-                  <a href="#" className="block py-2 px-4 ">
-                    Dropdown Item 3
+                  <a href="#" className="block py-4">
+                    Drone Day Workshop (for education)
                   </a>
                 </div>
               </div>
@@ -208,23 +234,24 @@ const NavBar = () => {
 
           <div className="inline-block relative z-10">
             <li onClick={() => setOpen3(!open3)} className="p-4 cursor-pointer">
-              Drone Videos
+              Gallery
             </li>
             {open3 && (
               <div className="w-80">
                 <div className="py-2 pl-10 rounded bg-white z-20 text-gray-600">
-                  <a href="#" className="block py-2 px-4 ">
-                    Dropdown Item 1
+                  <a href="#" className="block py-2 px-4">
+                    Videos
                   </a>
-                  <a href="#" className="block py-2 px-4 ">
-                    Dropdown Item 2
-                  </a>
-                  <a href="#" className="block py-2 px-4 ">
-                    Dropdown Item 3
+                  <a href="#" className="block py-2 px-4">
+                    Photos
                   </a>
                 </div>
               </div>
             )}
+          </div>
+
+          <div className="inline-block relative z-10">
+            <li className="p-4 cursor-pointer">Articles</li>
           </div>
 
           <div className="inline-block relative z-10">
@@ -234,14 +261,11 @@ const NavBar = () => {
             {open4 && (
               <div className="w-80">
                 <div className="py-2 pl-10 rounded bg-white z-20 text-gray-600">
-                  <a href="#" className="block py-2 px-4 ">
-                    Dropdown Item 1
+                  <a href="#" className="block py-2 px-4">
+                    About Us
                   </a>
-                  <a href="#" className="block py-2 px-4 ">
-                    Dropdown Item 2
-                  </a>
-                  <a href="#" className="block py-2 px-4 ">
-                    Dropdown Item 3
+                  <a href="#" className="block py-2 px-4">
+                    Meet the team
                   </a>
                 </div>
               </div>
@@ -249,24 +273,7 @@ const NavBar = () => {
           </div>
 
           <div className="inline-block relative z-10">
-            <li onClick={() => setOpen5(!open5)} className="p-4 cursor-pointer">
-              Drone Videos
-            </li>
-            {open5 && (
-              <div className="w-80">
-                <div className="py-2 pl-10 rounded bg-white z-20 text-gray-600">
-                  <a href="#" className="block py-2 px-4 ">
-                    Dropdown Item 1
-                  </a>
-                  <a href="#" className="block py-2 px-4 ">
-                    Dropdown Item 2
-                  </a>
-                  <a href="#" className="block py-2 px-4 ">
-                    Dropdown Item 3
-                  </a>
-                </div>
-              </div>
-            )}
+            <li className="p-4 cursor-pointer">Contact Us</li>
           </div>
         </ul>
       </div>

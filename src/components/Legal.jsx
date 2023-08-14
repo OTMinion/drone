@@ -37,7 +37,7 @@ const Legal = () => {
               Close
             </button>
 
-            <h1 className="text-2xl md:text-3xl text-center fixed pt-3">Terms and Conditions</h1>
+            <h1 className="text-lg md:text-3xl text-center fixed pt-3">Terms and Conditions</h1>
           </div>
 
           <div className="overflow-auto w-[90%] h-[73%] mt-14 px-8 absolute">
@@ -626,7 +626,7 @@ const Legal = () => {
               Close
             </button>
 
-            <h1 className="text-3xl text-center fixed pt-3">Privacy Policy</h1>
+            <h1 className="text-lg text-center fixed pt-3">Privacy Policy</h1>
             <div className="overflow-auto w-[90%] h-[73%] mt-14 px-8 absolute">
               {/* Add your Privacy Policy content here */}
             </div>
