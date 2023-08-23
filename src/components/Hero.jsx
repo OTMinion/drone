@@ -35,11 +35,13 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="pt-40 md:pt-[136px] w-[100vw] h-full overflow-hidden mx-auto px-5">
+    <div className="pt-40 md:pt-[150px] w-[100vw] h-full overflow-hidden mx-auto px-5">
       <h1 className="text-3xl md:hidden text-blue-500 text-center pb-5">
         SPECIALISED DRONE FILMING
       </h1>
-      <div ref={wrapperRef}>
+      <div ref={wrapperRef} className="relative">
+        {" "}
+        {/* Add relative positioning here */}
         <ReactPlayer
           className="object-cover"
           url={videoBg}
@@ -55,8 +57,11 @@ const Hero = () => {
         <div
           ref={overlayRef}
           onClick={handleVideoClick}
-          className="hidden md:block cursor-default absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0 transition-opacity duration-300">
-          <p className="text-white text-6xl bg-transparent px-4 py-2">Click for full screen</p>
+          className=" md:block cursor-default absolute top-1/3 left-1/3 right-0 bottom-0 flex items-center justify-center opacity-0 transition-opacity duration-300">
+          {/* Adjust the positioning here */}
+          <p className="text-white text-6xl bg-transparent px-4 py-2 hidden md:block">
+            Click for full screen
+          </p>
         </div>
       </div>
       <p className="md:hidden text-center text-gray-500">
