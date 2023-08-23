@@ -8,6 +8,7 @@ const NavBar = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [open1, setOpen1] = useState(false);
   const [open2, setOpen2] = useState(false);
+  const [open3, setOpen3] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -156,7 +157,19 @@ const NavBar = () => {
                 About Us
                 <span className="absolute inset-x-0 bottom-3 h-[3px] bg-current transform scale-x-0 group-hover:scale-x-[80%] transition-transform"></span>
               </li>
-              <div className="absolute hidden group-hover:block mt-1 w-48"></div>
+              <div className="absolute hidden group-hover:block  w-48">
+                <div className="py-2 px-3 rounded bg-white shadow z-20">
+                  <a href="#" className="block py-2 px-4 hover:bg-gray-200">
+                    About Us
+                  </a>
+                  <a href="#" className="block py-2 px-4 hover:bg-gray-200">
+                    Meet The Team
+                  </a>
+                  <a href="#" className="block py-2 px-4 hover:bg-gray-200">
+                    Safety
+                  </a>
+                </div>
+              </div>
             </div>
 
             <div className="group inline-block relative z-10">
@@ -233,7 +246,24 @@ const NavBar = () => {
           </div>
 
           <div className="inline-block relative z-10">
-            <li className="p-4 cursor-pointer">About Us</li>
+            <li onClick={() => setOpen3(!open3)} className="p-4 cursor-pointer">
+              About Us
+            </li>
+            {open3 && (
+              <div className="w-80">
+                <div className="py-2 pl-10 rounded bg-white z-20 text-gray-600">
+                  <a href="#" className="block py-4">
+                    About Us
+                  </a>
+                  <a href="#" className="block py-4">
+                    Meet The Team
+                  </a>
+                  <a href="#" className="block py-4">
+                    Safety
+                  </a>
+                </div>
+              </div>
+            )}
           </div>
 
           <div className="inline-block relative z-10">
