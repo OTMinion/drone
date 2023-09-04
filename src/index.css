@@ -9,3 +9,11 @@ body {
 li:hover {
   text-underline-offset: 8px;
 }
+
+input:checked ~ .toggle-bg {
+  background-color: #3b82f6; /* Equivalent to bg-blue-500 in Tailwind */
+}
+
+input:checked ~ .dot {
+  transform: translateX(100%);
+}

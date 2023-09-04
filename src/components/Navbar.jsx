@@ -1,10 +1,13 @@
 import { useState, useEffect } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import Logo from "../assets/logo.png";
+import { BiDownArrow } from "react-icons/bi";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   const [nav, setNav] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
+  const [isScrolled, setIsScrolled] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [open1, setOpen1] = useState(false);
   const [open2, setOpen2] = useState(false);
@@ -20,6 +23,21 @@ const NavBar = () => {
     };
     window.addEventListener("resize", handleResize);
 
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
     window.addEventListener("scroll", handleScroll);
 
     return () => {
@@ -50,24 +68,10 @@ const NavBar = () => {
   let logoStyle =
     windowWidth < 640
       ? {
-          width:
-            scrollPosition > 100
-              ? "150px"
-              : scrollPosition > 50
-              ? "170px"
-              : scrollPosition > 10
-              ? "190px"
-              : "200px",
-          height:
-            scrollPosition > 100
-              ? "120px"
-              : scrollPosition > 50
-              ? "120px"
-              : scrollPosition > 10
-              ? "140px"
-              : "150px",
+          width: scrollPosition > 100 ? "150px" : "200px",
+          height: scrollPosition > 100 ? "120px" : "150px",
           paddingTop: scrollPosition > 100 ? "15px" : "0px",
-          transition: "all 0.8s ease-in-out",
+          transition: "all 0.1s ease-in-out",
         }
       : {};
 
@@ -95,11 +99,14 @@ const NavBar = () => {
             SPECIALISED DRONE FILMING
           </h1>
           <ul className="hidden md:flex justify-center">
-            <div className="group inline-block relative z-10">
-              <li className="p-4 group relative cursor-pointer">
-                Services
-                <span className="absolute inset-x-0 bottom-3 h-[3px] bg-current transform scale-x-0 group-hover:scale-x-[80%] transition-transform"></span>
-              </li>
+            <div className="group inline-block relative z-10 px-4">
+              <div className="flex">
+                <li className="p-4 group relative cursor-pointer">
+                  Services
+                  <span className="absolute inset-x-0 bottom-3 h-[3px] bg-current transform scale-x-0 group-hover:scale-x-[90%] transition-transform left-2"></span>
+                </li>
+                <BiDownArrow size={13} className="mt-5 -ml-3" />
+              </div>
 
               <div className="absolute hidden group-hover:block  w-48">
                 <div className="py-2 px-3 rounded bg-white shadow z-20">
@@ -128,35 +135,38 @@ const NavBar = () => {
               </div>
             </div>
 
-            <div className="group inline-block relative z-10">
-              <li className="p-4 group relative cursor-pointer">
-                Courses
-                <span className="absolute inset-x-0 bottom-3 h-[3px] bg-current transform scale-x-0 group-hover:scale-x-[80%] transition-transform"></span>
-              </li>
+            <div className="group inline-block relative z-10 ">
+              <div className="flex">
+                <li className="p-4 group relative cursor-pointer">
+                  Courses
+                  <span className="absolute inset-x-0 bottom-3 h-[3px] bg-current transform scale-x-0 group-hover:scale-x-[90%] transition-transform left-2"></span>
+                </li>
+                <BiDownArrow size={13} className="mt-5 -ml-3" />
+              </div>
               <div className="absolute hidden group-hover:block  w-48">
                 <div className="py-2 px-3 rounded bg-white shadow z-20">
-                  <a href="#" className="block py-4 hover:bg-gray-200">
+                  <Link to="/workshop" className="block py-4 hover:bg-gray-200">
                     Drone Day Workshop (for education)
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
 
-            <div className="group inline-block relative z-10">
+            <div className="group inline-block relative z-10 pl-4">
               <li className="p-4 group relative cursor-pointer">
                 Gallery
                 <span className="absolute inset-x-0 bottom-3 h-[3px] bg-current transform scale-x-0 group-hover:scale-x-[80%] transition-transform"></span>
               </li>
-              <div className="absolute hidden group-hover:block  w-48">
-                <div className="py-2 px-3 rounded bg-white shadow z-20"></div>
-              </div>
             </div>
 
-            <div className="group inline-block relative z-10">
-              <li className="p-4 group relative cursor-pointer">
-                About Us
-                <span className="absolute inset-x-0 bottom-3 h-[3px] bg-current transform scale-x-0 group-hover:scale-x-[80%] transition-transform"></span>
-              </li>
+            <div className="group inline-block relative z-10 pr-4">
+              <div className="flex">
+                <li className="p-4 group relative cursor-pointer">
+                  Services
+                  <span className="absolute inset-x-0 bottom-3 h-[3px] bg-current transform scale-x-0 group-hover:scale-x-[90%] transition-transform left-2"></span>
+                </li>
+                <BiDownArrow size={13} className="mt-5 -ml-3" />
+              </div>
               <div className="absolute hidden group-hover:block  w-48">
                 <div className="py-2 px-3 rounded bg-white shadow z-20">
                   <a href="#" className="block py-2 px-4 hover:bg-gray-200">
@@ -172,7 +182,7 @@ const NavBar = () => {
               </div>
             </div>
 
-            <div className="group inline-block relative z-10">
+            <div className="group inline-block relative z-10 ">
               <li className="p-4 group relative cursor-pointer">
                 Contact Us
                 <span className="absolute inset-x-0 bottom-3 h-[3px] bg-current transform scale-x-0 group-hover:scale-x-[80%] transition-transform"></span>
@@ -183,20 +193,28 @@ const NavBar = () => {
 
         <div className="w-1/6">{/* Removed AiOutlineMenu from here */}</div>
       </div>
-      <hr className="border-t border-gray-400 w-[93%] md:w-[98%] mx-5 pb-2" />
+      <hr
+        className={`border-t border-gray-300 w-[93%] md:w-[98%] mx-5 pb-2 ${
+          isScrolled ? "-mt-3" : ""
+        }`}
+      />
 
       {/* Mobile Section */}
       <div
         className={
           nav
             ? "fixed left-0 top-0 w-[85%] h-full border-r border-r-gray-900 bg-[white] ease-in-out duration-500 md:hidden"
-            : "fixed left-[-100%] md:hidden"
+            : "fixed left-[-100%] md:hidden "
         }>
-        <ul className="uppercase p-4 text-black flex flex-col">
+        <ul className=" p-4 text-black flex flex-col">
           <div className="inline-block relative z-10">
-            <li onClick={() => setOpen1(!open1)} className="p-4 cursor-pointer">
-              Services
-            </li>
+            <div className="flex">
+              <li onClick={() => setOpen1(!open1)} className="p-4 cursor-pointer">
+                Services
+              </li>
+              <BiDownArrow size={13} className="mt-5 -ml-3" />
+            </div>
+
             {open1 && (
               <div className="w-80">
                 <div className="py-2 pl-6 rounded bg-white z-20 text-gray-600">
@@ -227,9 +245,12 @@ const NavBar = () => {
           </div>
 
           <div className="inline-block relative z-10">
-            <li onClick={() => setOpen2(!open2)} className="p-4 cursor-pointer">
-              Courses
-            </li>
+            <div className="flex">
+              <li onClick={() => setOpen2(!open2)} className="p-4 cursor-pointer">
+                Courses
+              </li>
+              <BiDownArrow size={13} className="mt-5 -ml-3" />
+            </div>
             {open2 && (
               <div className="w-80">
                 <div className="py-2 pl-10 rounded bg-white z-20 text-gray-600">
@@ -246,9 +267,12 @@ const NavBar = () => {
           </div>
 
           <div className="inline-block relative z-10">
-            <li onClick={() => setOpen3(!open3)} className="p-4 cursor-pointer">
-              About Us
-            </li>
+            <div className="flex">
+              <li onClick={() => setOpen3(!open3)} className="p-4 cursor-pointer">
+                About Us
+              </li>
+              <BiDownArrow size={13} className="mt-5 -ml-3" />
+            </div>
             {open3 && (
               <div className="w-80">
                 <div className="py-2 pl-10 rounded bg-white z-20 text-gray-600">

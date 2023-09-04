@@ -5,6 +5,9 @@ import Footer from "./components/Footer";
 import About from "./components/About";
 import Legal from "./components/Legal";
 import Cookies from "./components/Cookies";
+import Workshop from "./components/menu/Workshop"; // Make sure the path is correct
+
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 const App = () => {
   const [showCookie, setShowCookie] = useState(false);
@@ -15,21 +18,31 @@ const App = () => {
   const [isCookiesVisible, setIsCookiesVisible] = useState(true);
 
   return (
-    <div>
-      <Cookies
-        isShown={isCookiesVisible}
-        onClose={() => setIsCookiesVisible(false)}
-        onManage={toggleCookie} // Passing the toggleCookie function here
-      />
-
-      <div style={{ marginTop: isCookiesVisible ? "200px" : "0" }}>
+    <Router>
+      <div>
         <NavBar />
-        <Hero />
-        <About />
-        <Footer />
-        <Legal showCookie={showCookie} toggleCookie={toggleCookie} />
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <Hero />
+                <About />
+                <Footer />
+                <Legal showCookie={showCookie} toggleCookie={toggleCookie} />
+                <Cookies
+                  isShown={isCookiesVisible}
+                  onClose={() => setIsCookiesVisible(false)}
+                  onManage={toggleCookie} // Passing the toggleCookie function here
+                />
+              </>
+            }
+          />
+
+          <Route path="/workshop" element={<Workshop />} />
+        </Routes>
       </div>
-    </div>
+    </Router>
   );
 };
 
