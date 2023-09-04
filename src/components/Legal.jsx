@@ -126,7 +126,7 @@ const Legal = ({ showCookie, toggleCookie }) => {
 
             <h1 className="text-lg md:text-3xl text-center fixed pt-3 font-bold">Cookies</h1>
           </div>
-          <div className="overflow-auto w-[90%] h-[90%] mt-60 px-8 absolute">
+          <div className="overflow-auto w-[90%] h-[60%] mt-60 px-8 absolute">
             <p>
               Cookies are small text files that are placed on your computer by websites that you
               visit. They are widely used in order to make websites work, or work more efficiently,
