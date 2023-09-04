@@ -17,7 +17,7 @@ const Cookies = ({ isShown, onClose, onManage }) => {
     isShown && (
       <div
         className="fixed bottom-0 left-0 w-full bg-gray-800 border-b border-gray-300 text-black flex justify-center items-center z-40"
-        style={{ height: "130px" }}>
+        style={{ height: "150px" }}>
         <div className="md:flex mx-auto md:p-4 ">
           <div className="md:flex text-center space-y-4 text-white">
             <div className="md:text-left px-2">

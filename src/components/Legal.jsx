@@ -31,7 +31,7 @@ const Legal = ({ showCookie, toggleCookie }) => {
           className="cursor-pointer hover:underline hover:text-black transition-all duration-300 pt-3 pb-8 md:pl-10 md:py-0">
           Manage Cookies
         </p>
-        <p className="md:right-24 absolute">Copyright © 2022 Cinematic FPV.</p>
+        <p className="md:right-24 md:absolute">Copyright © 2022 Cinematic FPV.</p>
       </div>
       {showTerms && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
