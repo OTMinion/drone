@@ -196,7 +196,7 @@ const NavBar = () => {
       <div
         className={
           nav
-            ? "fixed right-0 top-0 w-[65%] h-full border-l border-l-gray-900 bg-[white] ease-in-out duration-500 md:hidden"
+            ? "fixed right-0 top-0 w-[70%] h-full border-l border-l-gray-900 bg-[white] ease-in-out duration-500 md:hidden"
             : "fixed right-[-100%] md:hidden"
         }>
         <ul className=" p-4 text-black flex flex-col items-center justify-center text-center mt-20">
@@ -209,7 +209,7 @@ const NavBar = () => {
             </div>
 
             <div
-              className={`w-80 submenu ${
+              className={`w-60 submenu ${
                 open1 ? "submenu-open" : ""
               }  rounded bg-white z-20 text-gray-600`}>
               <a href="#" className="block py-2 px-4">
@@ -245,7 +245,7 @@ const NavBar = () => {
             </div>
 
             <div
-              className={`w-80 submenu ${
+              className={`w-60 submenu ${
                 open2 ? "submenu-open" : ""
               }  rounded bg-white z-20 text-gray-600`}>
               <div className="py-2 rounded bg-white z-20 text-gray-600">
@@ -269,7 +269,7 @@ const NavBar = () => {
             </div>
 
             <div
-              className={`w-80 submenu ${
+              className={`w-60 submenu ${
                 open3 ? "submenu-open" : ""
               }  rounded bg-white z-20 text-gray-600`}>
               <div className="py-2 rounded bg-white z-20 text-gray-600">
