@@ -17,3 +17,20 @@ input:checked ~ .toggle-bg {
 input:checked ~ .dot {
   transform: translateX(100%);
 }
+
+/* Base style when submenu is hidden */
+.submenu {
+  opacity: 0;
+  height: 0;
+
+  transform: translateY(-10px);
+  transition: opacity 0.4s, transform 0.4s, visibility 0.4s;
+}
+
+/* Styles when submenu is visible */
+.submenu-open {
+  opacity: 1;
+  height: auto;
+  transform: translateY(0);
+  transition: opacity 0.2s, transform 0.2s, visibility 0.2s;
+}

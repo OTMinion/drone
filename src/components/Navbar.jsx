@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import Logo from "../assets/logo.png";
-import { BiDownArrow } from "react-icons/bi";
+import { BiSolidDownArrow } from "react-icons/bi";
 import { Link } from "react-router-dom";
 
 const NavBar = () => {
@@ -53,14 +53,7 @@ const NavBar = () => {
   let navbarStyle =
     windowWidth < 640
       ? {
-          paddingTop:
-            scrollPosition > 100
-              ? "0px"
-              : scrollPosition > 50
-              ? "10px"
-              : scrollPosition > 10
-              ? "20px"
-              : "30px",
+          paddingTop: scrollPosition > 100 ? "0px" : "30px",
           paddingBottom: scrollPosition > 100 ? "0px" : "10px",
         }
       : {};
@@ -82,7 +75,7 @@ const NavBar = () => {
           <img src={Logo} alt="logo" className="w-48 h-30  -ml-4" style={logoStyle} />
         </a>
 
-        <div onClick={handleNav} className="absolute right-6  ">
+        <div onClick={handleNav} className="absolute right-6 z-50 ">
           {nav ? <AiOutlineClose size={40} /> : <AiOutlineMenu size={40} />}
         </div>
       </div>
@@ -105,7 +98,7 @@ const NavBar = () => {
                   Services
                   <span className="absolute inset-x-0 bottom-3 h-[3px] bg-current transform scale-x-0 group-hover:scale-x-[90%] transition-transform left-2"></span>
                 </li>
-                <BiDownArrow size={13} className="mt-5 -ml-3" />
+                <BiSolidDownArrow size={10} className="mt-6 -ml-2" />
               </div>
 
               <div className="absolute hidden group-hover:block  w-48">
@@ -141,7 +134,7 @@ const NavBar = () => {
                   Courses
                   <span className="absolute inset-x-0 bottom-3 h-[3px] bg-current transform scale-x-0 group-hover:scale-x-[90%] transition-transform left-2"></span>
                 </li>
-                <BiDownArrow size={13} className="mt-5 -ml-3" />
+                <BiSolidDownArrow size={10} className="mt-6 -ml-2" />
               </div>
               <div className="absolute hidden group-hover:block  w-48">
                 <div className="py-2 px-3 rounded bg-white shadow z-20">
@@ -165,7 +158,7 @@ const NavBar = () => {
                   Services
                   <span className="absolute inset-x-0 bottom-3 h-[3px] bg-current transform scale-x-0 group-hover:scale-x-[90%] transition-transform left-2"></span>
                 </li>
-                <BiDownArrow size={13} className="mt-5 -ml-3" />
+                <BiSolidDownArrow size={10} className="mt-6 -ml-2" />
               </div>
               <div className="absolute hidden group-hover:block  w-48">
                 <div className="py-2 px-3 rounded bg-white shadow z-20">
@@ -195,7 +188,7 @@ const NavBar = () => {
       </div>
       <hr
         className={`border-t border-gray-300 w-[93%] md:w-[98%] mx-5 pb-2 ${
-          isScrolled ? "-mt-3" : ""
+          isScrolled ? "-mt-3 md:mt-0" : ""
         }`}
       />
 
@@ -203,95 +196,98 @@ const NavBar = () => {
       <div
         className={
           nav
-            ? "fixed left-0 top-0 w-[85%] h-full border-r border-r-gray-900 bg-[white] ease-in-out duration-500 md:hidden"
-            : "fixed left-[-100%] md:hidden "
+            ? "fixed right-0 top-0 w-[65%] h-full border-l border-l-gray-900 bg-[white] ease-in-out duration-500 md:hidden"
+            : "fixed right-[-100%] md:hidden"
         }>
-        <ul className=" p-4 text-black flex flex-col">
+        <ul className=" p-4 text-black flex flex-col items-center justify-center text-center mt-20">
           <div className="inline-block relative z-10">
-            <div className="flex">
-              <li onClick={() => setOpen1(!open1)} className="p-4 cursor-pointer">
+            <div className="flex justify-center">
+              <li onClick={() => setOpen1(!open1)} className="p-4 cursor-pointer font-bold">
                 Services
               </li>
-              <BiDownArrow size={13} className="mt-5 -ml-3" />
+              <BiSolidDownArrow size={10} className="mt-6 -ml-3" />
             </div>
 
-            {open1 && (
-              <div className="w-80">
-                <div className="py-2 pl-6 rounded bg-white z-20 text-gray-600">
-                  <a href="#" className="block py-2 px-4">
-                    Traditional Drone Filming
-                  </a>
-                  <a href="#" className="block py-2 px-4">
-                    FPV Drone Filming
-                  </a>
-                  <a href="#" className="block py-2 px-4">
-                    For Production Companies
-                  </a>
-                  <a href="#" className="block py-2 px-4">
-                    Film & TV
-                  </a>
-                  <a href="#" className="block py-2 px-4">
-                    Events
-                  </a>
-                  <a href="#" className="block py-2 px-4">
-                    Drone Tours & Fly-Throughs
-                  </a>
-                  <a href="#" className="block py-2 px-4">
-                    Real Estate
-                  </a>
-                </div>
-              </div>
-            )}
+            <div
+              className={`w-80 submenu ${
+                open1 ? "submenu-open" : ""
+              }  rounded bg-white z-20 text-gray-600`}>
+              <a href="#" className="block py-2 px-4">
+                Traditional Drone Filming
+              </a>
+              <a href="#" className="block py-2 px-4">
+                FPV Drone Filming
+              </a>
+              <a href="#" className="block py-2 px-4">
+                For Production Companies
+              </a>
+              <a href="#" className="block py-2 px-4">
+                Film & TV
+              </a>
+              <a href="#" className="block py-2 px-4">
+                Events
+              </a>
+              <a href="#" className="block py-2 px-4">
+                Drone Tours & Fly-Throughs
+              </a>
+              <a href="#" className="block py-2 px-4">
+                Real Estate
+              </a>
+            </div>
           </div>
 
           <div className="inline-block relative z-10">
-            <div className="flex">
-              <li onClick={() => setOpen2(!open2)} className="p-4 cursor-pointer">
+            <div className="flex justify-center">
+              <li onClick={() => setOpen2(!open2)} className="p-4 cursor-pointer font-bold">
                 Courses
               </li>
-              <BiDownArrow size={13} className="mt-5 -ml-3" />
+              <BiSolidDownArrow size={10} className="mt-6 -ml-3" />
             </div>
-            {open2 && (
-              <div className="w-80">
-                <div className="py-2 pl-10 rounded bg-white z-20 text-gray-600">
-                  <a href="#" className="block py-4">
-                    Drone Day Workshop (for education)
-                  </a>
-                </div>
+
+            <div
+              className={`w-80 submenu ${
+                open2 ? "submenu-open" : ""
+              }  rounded bg-white z-20 text-gray-600`}>
+              <div className="py-2 rounded bg-white z-20 text-gray-600">
+                <a href="#" className="block py-4 ">
+                  Drone Day Workshop (for education)
+                </a>
               </div>
-            )}
+            </div>
+          </div>
+
+          <div className="inline-block relative z-10 ">
+            <li className="p-4 cursor-pointer font-bold">Gallery</li>
           </div>
 
           <div className="inline-block relative z-10">
-            <li className="p-4 cursor-pointer">Gallery</li>
-          </div>
-
-          <div className="inline-block relative z-10">
-            <div className="flex">
-              <li onClick={() => setOpen3(!open3)} className="p-4 cursor-pointer">
+            <div className="flex justify-center">
+              <li onClick={() => setOpen3(!open3)} className="p-4 cursor-pointer font-bold">
                 About Us
               </li>
-              <BiDownArrow size={13} className="mt-5 -ml-3" />
+              <BiSolidDownArrow size={10} className="mt-6 -ml-3" />
             </div>
-            {open3 && (
-              <div className="w-80">
-                <div className="py-2 pl-10 rounded bg-white z-20 text-gray-600">
-                  <a href="#" className="block py-4">
-                    About Us
-                  </a>
-                  <a href="#" className="block py-4">
-                    Meet The Team
-                  </a>
-                  <a href="#" className="block py-4">
-                    Safety
-                  </a>
-                </div>
+
+            <div
+              className={`w-80 submenu ${
+                open3 ? "submenu-open" : ""
+              }  rounded bg-white z-20 text-gray-600`}>
+              <div className="py-2 rounded bg-white z-20 text-gray-600">
+                <a href="#" className="block py-4">
+                  About Us
+                </a>
+                <a href="#" className="block py-4">
+                  Meet The Team
+                </a>
+                <a href="#" className="block py-4">
+                  Safety
+                </a>
               </div>
-            )}
+            </div>
           </div>
 
           <div className="inline-block relative z-10">
-            <li className="p-4 cursor-pointer">Contact Us</li>
+            <li className="p-4 cursor-pointer font-bold">Contact Us</li>
           </div>
         </ul>
       </div>
