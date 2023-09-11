@@ -95,7 +95,7 @@ const NavBar = () => {
           <h1 className="text-md md:text-3xl lg:text-5xl text-blue-500 -mx-5 text-center">
             SPECIALISED DRONE FILMING
           </h1>
-          <ul className="hidden md:flex justify-center md:text-sm lg:text-lg whitespace-nowrap">
+          <ul className="hidden md:flex justify-center md:text-sm lg:text-lg ">
             <div className="group inline-block relative z-10 px-4">
               <div className="flex">
                 <li className="p-4 group relative cursor-pointer">
@@ -179,7 +179,7 @@ const NavBar = () => {
               </div>
             </div>
 
-            <div className="group inline-block relative z-10 ">
+            <div className="group inline-block relative z-10 whitespace-nowrap">
               <li className="p-4 group relative cursor-pointer">
                 Contact Us
                 <span className="absolute inset-x-0 bottom-3 h-[3px] bg-current transform scale-x-0 group-hover:scale-x-[80%] transition-transform"></span>
