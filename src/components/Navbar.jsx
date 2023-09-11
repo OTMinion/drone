@@ -72,7 +72,7 @@ const NavBar = () => {
     <div className={navbarClasses} style={navbarStyle}>
       <div className="flex items-center sm:h-36 h-28  w-full mx-auto px-4 text-black md:hidden pb-4">
         <a href="/">
-          <img src={Logo} alt="logo" className="w-48 h-30  -ml-4" style={logoStyle} />
+          <img src={Logo} alt="logo" className="w-48  h-30  -ml-4" style={logoStyle} />
         </a>
 
         <div onClick={handleNav} className="absolute right-6 z-50 ">
@@ -83,7 +83,11 @@ const NavBar = () => {
       <div className="hidden md:flex items-center h-30 w-full mx-auto px-4 text-black">
         <div className="md:w-1/6">
           <a href="/">
-            <img src={Logo} alt="logo" className="w-48 h-[140px] -mt-1 -ml-4" />
+            <img
+              src={Logo}
+              alt="logo"
+              className="w-48 lg:h-[140px] h-[120px] -mt-1 lg:ml-6 -ml-4"
+            />
           </a>
         </div>
 
@@ -91,7 +95,7 @@ const NavBar = () => {
           <h1 className="text-md md:text-3xl lg:text-5xl text-blue-500 -mx-5 text-center">
             SPECIALISED DRONE FILMING
           </h1>
-          <ul className="hidden md:flex justify-center md:text-sm lg:text-lg">
+          <ul className="hidden md:flex justify-center md:text-sm lg:text-lg whitespace-nowrap">
             <div className="group inline-block relative z-10 px-4">
               <div className="flex">
                 <li className="p-4 group relative cursor-pointer">
