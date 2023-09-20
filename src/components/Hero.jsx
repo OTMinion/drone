@@ -35,7 +35,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="pt-40 md:pt-[150px] w-[100vw] h-full overflow-hidden mx-auto px-5">
+    <div className="pt-40 md:pt-[140px] w-[100vw] h-full overflow-hidden mx-auto px-5">
       <h1 className="text-3xl md:hidden text-blue-500 text-center pb-5">
         SPECIALISED DRONE FILMING
       </h1>

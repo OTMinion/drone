@@ -38,14 +38,14 @@ const Legal = ({ showCookie, toggleCookie }) => {
           <div className="bg-white w-[90%] h-[90%]  p-8 relative ">
             <button
               onClick={toggleTerms}
-              className="absolute top-10 right-10 md:right-25 cursor-pointer border border-gray-400 rounded-full px-8 py-2">
+              className="absolute bottom-5 right-40  md:right-25 cursor-pointer border border-gray-400 rounded-full px-8 py-2">
               Close
             </button>
 
             <h1 className="text-lg md:text-3xl text-center fixed pt-3">Terms and Conditions</h1>
           </div>
 
-          <div className="overflow-auto w-[90%] h-[60%] mt-8 px-8 absolute">
+          <div className="overflow-auto w-[90%] h-[65%] mt-8 px-8 absolute">
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa sint aliquid atque,
               pariatur libero dolor delectus, error praesentium incidunt ipsam debitis. Quo, minima
@@ -103,7 +103,7 @@ const Legal = ({ showCookie, toggleCookie }) => {
           <div className="bg-white w-[90%] h-[90%]  p-8 relative">
             <button
               onClick={togglePolicy}
-              className="absolute top-10 right-10 md:right-25 cursor-pointer border border-gray-400 rounded-full px-8 py-2">
+              className="absolute bottom-5 right-40 md:right-25 cursor-pointer border border-gray-400 rounded-full px-8 py-2">
               Close
             </button>
 
@@ -120,7 +120,7 @@ const Legal = ({ showCookie, toggleCookie }) => {
           <div className="bg-white w-[90%] h-[90%]  p-8 relative">
             <button
               onClick={toggleCookie}
-              className="absolute top-10 right-10 md:right-25 cursor-pointer border border-gray-400 rounded-full px-8 py-2">
+              className="absolute bottom-5 right-40 md:right-25 cursor-pointer border border-gray-400 rounded-full px-8 py-2">
               Close
             </button>
 

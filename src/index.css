@@ -24,7 +24,6 @@ input:checked ~ .dot {
   height: 0;
 
   transform: translateY(-10px);
-  transition: opacity 0.4s, transform 0.4s, visibility 0.4s;
 }
 
 /* Styles when submenu is visible */

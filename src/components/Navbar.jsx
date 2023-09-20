@@ -100,7 +100,7 @@ const NavBar = () => {
               <div className="flex">
                 <li className="p-4 group relative cursor-pointer">
                   Services
-                  <span className="absolute inset-x-0 bottom-3 h-[3px] bg-current transform scale-x-0 group-hover:scale-x-[90%] transition-transform left-2"></span>
+                  <span className="absolute inset-x-0 bottom-3 h-[3px] bg-current transform scale-x-0 group-hover:scale-x-[110%] transition-transform left-2"></span>
                 </li>
                 <BiSolidDownArrow size={10} className="mt-6 -ml-2" />
               </div>
@@ -136,13 +136,13 @@ const NavBar = () => {
               <div className="flex">
                 <li className="p-4 group relative cursor-pointer">
                   Courses
-                  <span className="absolute inset-x-0 bottom-3 h-[3px] bg-current transform scale-x-0 group-hover:scale-x-[90%] transition-transform left-2"></span>
+                  <span className="absolute inset-x-0 bottom-3 h-[3px] bg-current transform scale-x-0 group-hover:scale-x-[110%] transition-transform left-2"></span>
                 </li>
                 <BiSolidDownArrow size={10} className="mt-6 -ml-2" />
               </div>
               <div className="absolute hidden group-hover:block  w-48">
                 <div className="py-2 px-3 rounded bg-white shadow z-20">
-                  <Link to="/workshop" className="block py-4 hover:bg-gray-200">
+                  <Link to="/workshop" className="block py-4 px-4 hover:bg-gray-200">
                     Drone Day Workshop (for education)
                   </Link>
                 </div>
@@ -160,7 +160,7 @@ const NavBar = () => {
               <div className="flex">
                 <li className="p-4 group relative cursor-pointer">
                   Services
-                  <span className="absolute inset-x-0 bottom-3 h-[3px] bg-current transform scale-x-0 group-hover:scale-x-[90%] transition-transform left-2"></span>
+                  <span className="absolute inset-x-0 bottom-3 h-[3px] bg-current transform scale-x-0 group-hover:scale-x-[110%] transition-transform left-2"></span>
                 </li>
                 <BiSolidDownArrow size={10} className="mt-6 -ml-2" />
               </div>
@@ -191,7 +191,7 @@ const NavBar = () => {
         <div className="w-1/6">{/* Removed AiOutlineMenu from here */}</div>
       </div>
       <hr
-        className={`border-t border-gray-300 w-[93%] md:w-[98%] mx-5 pb-2 ${
+        className={`border-t border-gray-300 w-[93%] md:w-[98%] mx-5 pb-2 -mt-2${
           isScrolled ? "-mt-3 md:mt-0" : ""
         }`}
       />
@@ -200,7 +200,7 @@ const NavBar = () => {
       <div
         className={
           nav
-            ? "fixed right-0 top-0 w-[70%] h-full border-l border-l-gray-900 bg-[white] ease-in-out duration-500 md:hidden"
+            ? "scrollable-sidebar fixed right-0 top-0 w-[70%] h-full border-l border-l-gray-900 bg-[white] ease-in-out duration-500 md:hidden"
             : "fixed right-[-100%] md:hidden"
         }>
         <ul className=" p-4 text-black flex flex-col items-center justify-center text-center mt-20">
@@ -209,7 +209,7 @@ const NavBar = () => {
               <li onClick={() => setOpen1(!open1)} className="p-4 cursor-pointer font-bold">
                 Services
               </li>
-              <BiSolidDownArrow size={10} className="mt-6 -ml-3" />
+              <BiSolidDownArrow size={10} className="mt-7 -ml-3" />
             </div>
 
             <div
@@ -245,7 +245,7 @@ const NavBar = () => {
               <li onClick={() => setOpen2(!open2)} className="p-4 cursor-pointer font-bold">
                 Courses
               </li>
-              <BiSolidDownArrow size={10} className="mt-6 -ml-3" />
+              <BiSolidDownArrow size={10} className="mt-7 -ml-3" />
             </div>
 
             <div
@@ -253,7 +253,7 @@ const NavBar = () => {
                 open2 ? "submenu-open" : ""
               }  rounded bg-white z-20 text-gray-600`}>
               <div className="py-2 rounded bg-white z-20 text-gray-600">
-                <a href="#" className="block py-4 ">
+                <a href="#" className="block py-4">
                   Drone Day Workshop (for education)
                 </a>
               </div>
@@ -269,7 +269,7 @@ const NavBar = () => {
               <li onClick={() => setOpen3(!open3)} className="p-4 cursor-pointer font-bold">
                 About Us
               </li>
-              <BiSolidDownArrow size={10} className="mt-6 -ml-3" />
+              <BiSolidDownArrow size={10} className="mt-7 -ml-3" />
             </div>
 
             <div
