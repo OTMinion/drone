@@ -72,7 +72,7 @@ const NavBar = () => {
     <div className={navbarClasses} style={navbarStyle}>
       <div className="flex items-center sm:h-36 h-28  w-full mx-auto px-4 text-black md:hidden pb-4">
         <a href="/">
-          <img src={Logo} alt="logo" className="w-48  h-30  -ml-4" style={logoStyle} />
+          <img src={Logo} alt="logo" className="w-[150px] h-[120px] -ml-4" style={logoStyle} />
         </a>
 
         <div onClick={handleNav} className="absolute right-6 z-50 ">
@@ -192,7 +192,7 @@ const NavBar = () => {
       </div>
       <hr
         className={`border-t border-gray-300 w-[93%] md:w-[98%] mx-5 pb-2 -mt-2${
-          isScrolled ? "-mt-3 md:mt-0" : ""
+          isScrolled ? " md:mt-0" : ""
         }`}
       />
 
@@ -200,7 +200,7 @@ const NavBar = () => {
       <div
         className={
           nav
-            ? "scrollable-sidebar fixed right-0 top-0 w-[70%] h-full border-l border-l-gray-900 bg-[white] ease-in-out duration-500 md:hidden"
+            ? "scrollable-sidebar overflow-y-auto fixed right-0 top-0 w-[70%] h-full border-l border-l-gray-900 bg-[white] ease-in-out duration-500 md:hidden"
             : "fixed right-[-100%] md:hidden"
         }>
         <ul className=" p-4 text-black flex flex-col items-center justify-center text-center mt-20">
@@ -209,7 +209,7 @@ const NavBar = () => {
               <li onClick={() => setOpen1(!open1)} className="p-4 cursor-pointer font-bold">
                 Services
               </li>
-              <BiSolidDownArrow size={10} className="mt-7 -ml-3" />
+              <BiSolidDownArrow size={10} className="mt-6 -ml-3" />
             </div>
 
             <div
@@ -245,7 +245,7 @@ const NavBar = () => {
               <li onClick={() => setOpen2(!open2)} className="p-4 cursor-pointer font-bold">
                 Courses
               </li>
-              <BiSolidDownArrow size={10} className="mt-7 -ml-3" />
+              <BiSolidDownArrow size={10} className="mt-6 -ml-3" />
             </div>
 
             <div
@@ -269,7 +269,7 @@ const NavBar = () => {
               <li onClick={() => setOpen3(!open3)} className="p-4 cursor-pointer font-bold">
                 About Us
               </li>
-              <BiSolidDownArrow size={10} className="mt-7 -ml-3" />
+              <BiSolidDownArrow size={10} className="mt-6 -ml-3" />
             </div>
 
             <div
