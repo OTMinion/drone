@@ -1,10 +1,10 @@
-import { FaFacebookSquare, FaInstagram, FaTwitterSquare } from "react-icons/fa";
+import { FaYoutube, FaInstagram, FaLinkedin } from "react-icons/fa";
 import Logo from "../assets/logo.png";
 import email from "../assets/email.png";
 
 const Footer = () => {
   return (
-    <div className="w-full py-10 px-4 grid lg:grid-cols-4 gap-8 text-black">
+    <div className="w-full pt-10 px-4 grid lg:grid-cols-4 gap-8 text-black">
       <div className="flex justify-center items-center w-full">
         <img src={Logo} alt="logo" className="w-3/4 md:w-1/2 lg:w-full" />
       </div>
@@ -28,9 +28,18 @@ const Footer = () => {
       </div>
 
       <div className="flex md:w-[90%] my-6 justify-between items-center ml-5">
-        <FaFacebookSquare size={50} className="hover:text-blue-500" />
-        <FaInstagram size={50} className="hover:text-red-500" />
-        <FaTwitterSquare size={50} className="hover:text-blue-500" />
+        <a href="https://www.youtube.com/@cinematicfpv" target="_blank" rel="noopener noreferrer">
+          <FaYoutube size={50} className="hover:text-red-500" />
+        </a>
+        <a
+          href="https://www.instagram.com/cinematicfpvuk/"
+          target="_blank"
+          rel="noopener noreferrer">
+          <FaInstagram size={50} className="hover:text-red-500" />
+        </a>
+        <a href="https://www.linkedin.com/cinematicfpv" target="_blank" rel="noopener noreferrer">
+          <FaLinkedin size={50} className="hover:text-blue-500" />
+        </a>
       </div>
     </div>
   );

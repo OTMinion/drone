@@ -2,10 +2,10 @@ import { useState } from "react";
 import NavBar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Footer from "./components/Footer";
-import About from "./components/About";
+import Content from "./components/Content";
 import Legal from "./components/Legal";
 import Cookies from "./components/Cookies";
-import Workshop from "./components/menu/Workshop"; // Make sure the path is correct
+import Workshop from "./components/courses/Workshop"; // Make sure the path is correct
 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
@@ -19,7 +19,7 @@ const App = () => {
 
   return (
     <Router>
-      <div>
+      <div className="font-montserrat">
         <NavBar />
         <Routes>
           <Route
@@ -27,7 +27,7 @@ const App = () => {
             element={
               <>
                 <Hero />
-                <About />
+                <Content />
                 <Footer />
                 <Legal showCookie={showCookie} toggleCookie={toggleCookie} />
                 <Cookies

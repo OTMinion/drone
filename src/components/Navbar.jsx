@@ -155,7 +155,7 @@ const NavBar = () => {
             <div className="group inline-block relative z-10 pr-4">
               <div className="flex">
                 <li className="p-4 group relative cursor-pointer">
-                  Services
+                  About Us
                   <span className="absolute inset-x-0 bottom-3 h-[3px] bg-current transform scale-x-0 group-hover:scale-x-[110%] transition-transform left-2"></span>
                 </li>
                 <BiSolidDownArrow size={10} className="mt-6 -ml-2" />
@@ -187,8 +187,8 @@ const NavBar = () => {
         <div className="w-1/6">{/* Removed AiOutlineMenu from here */}</div>
       </div>
       <hr
-        className={`border-t border-gray-300 w-[93%] md:w-[98%] mx-5 pb-2 -mt-2${
-          isScrolled ? " md:mt-0" : ""
+        className={`border-t border-gray-300 w-[93%] md:w-[98%] mx-5 pb-2 -mt-4${
+          isScrolled ? "" : ""
         }`}
       />
 
