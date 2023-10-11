@@ -290,7 +290,9 @@ const NavBar = () => {
           </div>
 
           <div className="inline-block relative z-10">
-            <li className="p-4 cursor-pointer font-bold">Contact Us</li>
+            <li className="p-4 cursor-pointer font-bold">
+              <Link to="/contact">Contact Us</Link>
+            </li>
           </div>
         </ul>
       </div>
