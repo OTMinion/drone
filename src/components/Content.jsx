@@ -185,7 +185,7 @@ const Content = () => {
           <h1 className="text-4xl md:ml-40 ml-5 font-light text-gray-500">
             OUR <span className="font-normal text-gray-950">CLIENTS</span>
           </h1>
-          <hr className="border-t border-gray-400 w-[40%] md:w-[0%] my-auto md:ml-10 mr-10 md:mr-0" />
+          <hr className="border-t border-gray-400 w-[40%] md:w-[57%] my-auto md:ml-10 mr-10 md:mr-0" />
         </div>
 
         <div>

@@ -103,27 +103,29 @@ const NavBar = () => {
 
               <div className="absolute hidden group-hover:block  w-48">
                 <div className="py-2 px-3 rounded bg-white shadow z-20">
-                  <a href="#" className="block py-2 px-4 hover:bg-gray-200">
+                  <Link
+                    to="/traditional_drone_filming"
+                    className="block py-2 px-4 hover:bg-gray-200">
                     Traditional Drone Filming
-                  </a>
-                  <a href="#" className="block py-2 px-4 hover:bg-gray-200">
+                  </Link>
+                  <Link to="/fpv_drone_filming" className="block py-2 px-4 hover:bg-gray-200">
                     FPV Drone Filming
-                  </a>
-                  <a href="#" className="block py-2 px-4 hover:bg-gray-200">
+                  </Link>
+                  <Link to="/production" className="block py-2 px-4 hover:bg-gray-200">
                     For Production Companies
-                  </a>
-                  <a href="#" className="block py-2 px-4 hover:bg-gray-200">
+                  </Link>
+                  <Link to="/film_and_tv" className="block py-2 px-4 hover:bg-gray-200">
                     Film & TV
-                  </a>
-                  <a href="#" className="block py-2 px-4 hover:bg-gray-200">
+                  </Link>
+                  <Link to="/events" className="block py-2 px-4 hover:bg-gray-200">
                     Events
-                  </a>
-                  <a href="#" className="block py-2 px-4 hover:bg-gray-200">
+                  </Link>
+                  <Link to="/drone_tours" className="block py-2 px-4 hover:bg-gray-200">
                     Drone Tours & Fly-Throughs
-                  </a>
-                  <a href="#" className="block py-2 px-4 hover:bg-gray-200">
+                  </Link>
+                  <Link to="/real_estate" className="block py-2 px-4 hover:bg-gray-200">
                     Real Estate
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -162,22 +164,23 @@ const NavBar = () => {
               </div>
               <div className="absolute hidden group-hover:block  w-48">
                 <div className="py-2 px-3 rounded bg-white shadow z-20">
-                  <a href="#" className="block py-2 px-4 hover:bg-gray-200">
+                  <Link to="/about" className="block py-2 px-4 hover:bg-gray-200">
                     About Us
-                  </a>
-                  <a href="#" className="block py-2 px-4 hover:bg-gray-200">
+                  </Link>
+                  <Link to="meet_the_team" className="block py-2 px-4 hover:bg-gray-200">
                     Meet The Team
-                  </a>
-                  <a href="#" className="block py-2 px-4 hover:bg-gray-200">
+                  </Link>
+                  <Link to="safety" className="block py-2 px-4 hover:bg-gray-200">
                     Safety
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
 
             <div className="group inline-block relative z-10 whitespace-nowrap">
               <li className="p-4 group relative cursor-pointer">
-                Contact Us
+                <Link to="/contact">Contact Us</Link>
+
                 <span className="absolute inset-x-0 bottom-3 h-[3px] bg-current transform scale-x-0 group-hover:scale-x-[80%] transition-transform"></span>
               </li>
             </div>
