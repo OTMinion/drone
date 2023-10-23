@@ -57,9 +57,9 @@ const Hero = () => {
         <div
           ref={overlayRef}
           onClick={handleVideoClick}
-          className=" md:block cursor-default absolute top-1/3 left-1/3 right-0 bottom-0 flex items-center justify-center opacity-0 transition-opacity duration-300">
+          className=" md:block cursor-default absolute top-1/3 left-80  bottom-0 flex items-center justify-center opacity-0 transition-opacity duration-300">
           {/* Adjust the positioning here */}
-          <p className="text-white text-6xl bg-transparent px-4 py-2 hidden md:block">
+          <p className="text-white text-7xl bg-transparent px-4 py-2 hidden md:block">
             Click for full screen
           </p>
         </div>

@@ -1,4 +1,5 @@
-import React from "react";
+import a from "../../assets/services/img-drone-apex.jpg";
+import b from "../../assets/services/img-drone-nakex (1).jpg";
 
 const Fpv_drone_filming = () => {
   return (
@@ -13,8 +14,8 @@ const Fpv_drone_filming = () => {
       </div>
 
       {/* Image Placeholder */}
-      <div className="bg-gray-300 h-64 mb-12 flex items-center justify-center">
-        <span className="text-gray-600">[Insert picture of Apex 5” drone – coming later]</span>
+      <div className=" h-64 mb-28 flex items-center justify-center">
+        <img src={a} className="w-full h-auto object-cover" />
       </div>
 
       {/* FPV Explanation */}
@@ -56,48 +57,49 @@ const Fpv_drone_filming = () => {
           making each one have unique characteristics while providing redundancy to other drones in
           the same category.
         </p>
-        <p className="mb-4">
-          The safest drones are the smallest and lightest. In fact, we have 8 drones (including 2
-          training drones) that can fly in the sub 250 gram category, allowing for the greatest
-          levels of freedom by the CAA (civil aviation authority). And yet, these small, light
-          drones are capable of extraordinary feats when it comes to flying and filming. We also use
-          propeller guards when flying close to people and objects, highlighting safety as a key
-          element to all we do.
-        </p>
-        <div className="bg-gray-300 h-64 mb-6 flex items-center justify-center">
-          <span className="text-gray-600">
-            [Insert picture of Nakex drone with naked 11 camera – coming later – use any image for
-            now]
-          </span>
+
+        <div className="mb-6 grid grid-cols-10 gap-8">
+          <div className="col-span-4">
+            <p className="mb-4">
+              The safest drones are the smallest and lightest. In fact, we have 8 drones (including
+              2 training drones) that can fly in the sub 250 gram category, allowing for the
+              greatest levels of freedom by the CAA (civil aviation authority). And yet, these
+              small, light drones are capable of extraordinary feats when it comes to flying and
+              filming. We also use propeller guards when flying close to people and objects,
+              highlighting safety as a key element to all we do.
+            </p>
+            <p className="mb-4">
+              Our FPV drones can be used in a variety of different ways, including:
+            </p>
+            <ul className="list-disc pl-6 mb-4">
+              <li>Creating very dynamic and engaging footage – perfect for social media</li>
+              <li>Flying through complex terrain, close to objects etc., both indoors and out</li>
+              <li>
+                Giving ‘virtual tours’ of places, such as pubs, restaurants, activity and garden
+                centres etc.
+              </li>
+              <li>Following subjects, such as fast-moving cars, or actors on a film set</li>
+            </ul>
+            <p>
+              The kinds of shots we can obtain are only limited by imagination; come and talk with
+              us about any video needs you may have.
+            </p>
+          </div>
+
+          <img src={b} className="w-full h-auto object-cover col-span-6" />
         </div>
-        <p className="mb-4">
-          Our FPV drones can be used in a variety of different ways, including:
-        </p>
-        <ul className="list-disc pl-6 mb-4">
-          <li>Creating very dynamic and engaging footage – perfect for social media</li>
-          <li>Flying through complex terrain, close to objects etc., both indoors and out</li>
-          <li>
-            Giving ‘virtual tours’ of places, such as pubs, restaurants, activity and garden centres
-            etc.
-          </li>
-          <li>Following subjects, such as fast-moving cars, or actors on a film set</li>
-        </ul>
-        <p>
-          The kinds of shots we can obtain are only limited by imagination; come and talk with us
-          about any video needs you may have.
-        </p>
       </div>
 
       {/* Embedded Video */}
       <div className="mb-12">
         <iframe
           width="100%"
-          height="315"
+          height="600"
           src="https://www.youtube.com/embed/c9ZxwBgjTDo?si=H7Qa4_zCTvKDHgyZ"
           title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen></iframe>
+          allowfullscreen="true"></iframe>
       </div>
     </div>
   );

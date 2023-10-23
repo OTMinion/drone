@@ -1,10 +1,12 @@
-import React from "react";
+import a from "../../assets/services/img-drone-air3.jpg";
 
 const TraditionalDroneFilming = () => {
   return (
-    <div className="bg-gray-200 min-h-screen p-4  pt-32">
-      <div className="max-w-6xl mx-auto bg-white p-6 rounded-lg shadow-md">
-        <h1 className="text-3xl font-bold mb-4">Traditional Drone Filming</h1>
+    <div className="bg-gray-200  pt-32">
+      <div className=" mx-auto bg-white p-6 rounded-lg shadow-md">
+        <img src={a} className="w-full h-96 object-cover object-center" />
+
+        <h1 className="text-3xl font-bold mb-4 mt-5">Traditional Drone Filming</h1>
         <p className="text-gray-700 mb-6">
           Traditional drone filming refers to getting many of the traditional drone shots that you
           see used on film and TV. These kind of shots are generally slow (and sometimes static),

@@ -9,8 +9,9 @@ const Footer = () => {
         <img src={Logo} alt="logo" className="w-3/4 md:w-1/2 lg:w-full" />
       </div>
 
-      <div className="flex text-center text-sm justify-center items-center md:-ml-6">
-        STEVE IS CAA AND FULLY INSURED FPV AND COMMERCIAL DRONE PILOT OPERATING IN ESSEX AND LONDON.
+      <div className="flex text-center text-sm justify-center items-center md:-ml-6 md:pt-5">
+        STEVE IS CAA AND FULLY INSURED FPV AND COMMERCIAL DRONE PILOT OPERATING IN AND AROUND
+        BIRMINGHAM.
       </div>
 
       <div className="flex flex-col justify-center items-center ml-4 text-md">
@@ -37,7 +38,10 @@ const Footer = () => {
           rel="noopener noreferrer">
           <FaInstagram size={50} className="hover:text-red-500" />
         </a>
-        <a href="https://www.linkedin.com/cinematicfpv" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://www.linkedin.com/in/cinematicfpv"
+          target="_blank"
+          rel="noopener noreferrer">
           <FaLinkedin size={50} className="hover:text-blue-500" />
         </a>
       </div>

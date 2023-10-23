@@ -76,7 +76,11 @@ const NavBar = () => {
         </a>
 
         <div onClick={handleNav} className="absolute right-6 z-50 ">
-          {nav ? <AiOutlineClose size={40} /> : <AiOutlineMenu size={40} />}
+          {nav ? (
+            <AiOutlineClose size={70} color="white" className="absolute right-72 -top-9" />
+          ) : (
+            <AiOutlineMenu size={40} />
+          )}
         </div>
       </div>
 
@@ -96,7 +100,7 @@ const NavBar = () => {
               <div className="flex">
                 <li className="p-4 group relative cursor-pointer">
                   Services
-                  <span className="absolute inset-x-0 bottom-3 h-[3px] bg-current transform scale-x-0 group-hover:scale-x-[110%] transition-transform left-2"></span>
+                  <span className="absolute inset-x-0 bottom-3 h-[3px] bg-current transform scale-x-0 group-hover:scale-x-[110%] transition-transform left-3"></span>
                 </li>
                 <BiSolidDownArrow size={10} className="mt-6 -ml-2" />
               </div>
@@ -126,6 +130,9 @@ const NavBar = () => {
                   <Link to="/real_estate" className="block py-2 px-4 hover:bg-gray-200">
                     Real Estate
                   </Link>
+                  <Link to="/photography" className="block py-2 px-4 hover:bg-gray-200">
+                    Drone Photography
+                  </Link>
                 </div>
               </div>
             </div>
@@ -138,23 +145,25 @@ const NavBar = () => {
                 </li>
                 <BiSolidDownArrow size={10} className="mt-6 -ml-2" />
               </div>
-              <div className="absolute hidden group-hover:block  w-48">
+              <div className="absolute hidden group-hover:block  w-60">
                 <div className="py-2 px-3 rounded bg-white shadow z-20">
-                  <Link to="/workshop" className="block py-4 px-4 hover:bg-gray-200">
-                    Drone Day Workshop (for education)
+                  <Link to="/workshop" className="block py-4 px-2 hover:bg-gray-200">
+                    Drone Day Workshop
+                    <br />
+                    (for education)
                   </Link>
                 </div>
               </div>
             </div>
 
-            <div className="group inline-block relative z-10 pl-4">
+            {/* <div className="group inline-block relative z-10 pl-4">
               <li className="p-4 group relative cursor-pointer">
                 Gallery
                 <span className="absolute inset-x-0 bottom-3 h-[3px] bg-current transform scale-x-0 group-hover:scale-x-[80%] transition-transform"></span>
               </li>
-            </div>
+            </div> */}
 
-            <div className="group inline-block relative z-10 pr-4">
+            <div className="group inline-block relative z-10 pr-4 pl-3">
               <div className="flex">
                 <li className="p-4 group relative cursor-pointer">
                   About Us
@@ -190,19 +199,23 @@ const NavBar = () => {
         <div className="w-1/6">{/* Removed AiOutlineMenu from here */}</div>
       </div>
       <hr
-        className={`border-t border-gray-300 w-[93%] md:w-[98%] mx-5 pb-2 -mt-4${
-          isScrolled ? "" : ""
+        className={`border-t border-gray-300 w-[90%] md:w-[98%] mx-5 pb-2 md:-mt-4${
+          isScrolled ? "border-t border-gray-300 w-[90%] md:w-[98%] mx-5 pb-2 -mt-4" : ""
         }`}
       />
 
       {/* Mobile Section */}
       <div
+        className={nav ? "fixed top-0 left-0 w-full h-full bg-black opacity-50 z-40" : "hidden"}
+        onClick={handleNav}
+      />
+      <div
         className={
           nav
-            ? "scrollable-sidebar overflow-y-auto fixed right-0 top-0 w-[70%] h-full border-l border-l-gray-900 bg-[white] ease-in-out duration-500 md:hidden"
+            ? "scrollable-sidebar overflow-y-auto fixed right-0 top-0 w-[70%] h-full border-l border-l-gray-900 bg-[white] z-50 ease-in-out duration-500 md:hidden"
             : "fixed right-[-100%] md:hidden"
         }>
-        <ul className=" p-4 text-black flex flex-col items-center justify-center text-center mt-20">
+        <ul className=" p-4 text-black flex flex-col items-center justify-center text-center mt-10">
           <div className="inline-block relative z-10">
             <div className="flex justify-center">
               <li onClick={() => setOpen1(!open1)} className="p-4 cursor-pointer font-bold">
@@ -215,27 +228,30 @@ const NavBar = () => {
               className={`w-60 submenu ${
                 open1 ? "submenu-open" : ""
               }  rounded bg-white z-20 text-gray-600`}>
-              <a href="#" className="block py-2 px-4">
+              <Link to="/traditional_drone_filming" className="block py-2 px-4" onClick={handleNav}>
                 Traditional Drone Filming
-              </a>
-              <a href="#" className="block py-2 px-4">
+              </Link>
+              <Link to="/fpv_drone_filming" className="block py-2 px-4" onClick={handleNav}>
                 FPV Drone Filming
-              </a>
-              <a href="#" className="block py-2 px-4">
+              </Link>
+              <Link to="/production" className="block py-2 px-4" onClick={handleNav}>
                 For Production Companies
-              </a>
-              <a href="#" className="block py-2 px-4">
+              </Link>
+              <Link to="/film_and_tv" className="block py-2 px-4" onClick={handleNav}>
                 Film & TV
-              </a>
-              <a href="#" className="block py-2 px-4">
+              </Link>
+              <Link to="/events" className="block py-2 px-4" onClick={handleNav}>
                 Events
-              </a>
-              <a href="#" className="block py-2 px-4">
+              </Link>
+              <Link to="/drone_tours" className="block py-2 px-4" onClick={handleNav}>
                 Drone Tours & Fly-Throughs
-              </a>
-              <a href="#" className="block py-2 px-4">
+              </Link>
+              <Link to="/real_estate" className="block py-2 px-4" onClick={handleNav}>
                 Real Estate
-              </a>
+              </Link>
+              <Link to="/photography" className="block py-2 px-4" onClick={handleNav}>
+                Drone Photography
+              </Link>
             </div>
           </div>
 
@@ -252,16 +268,18 @@ const NavBar = () => {
                 open2 ? "submenu-open" : ""
               }  rounded bg-white z-20 text-gray-600`}>
               <div className="py-2 rounded bg-white z-20 text-gray-600">
-                <a href="#" className="block py-4">
-                  Drone Day Workshop (for education)
-                </a>
+                <Link to="/workshop" className="block py-4" onClick={handleNav}>
+                  Drone Day Workshop
+                  <br />
+                  (for education)
+                </Link>
               </div>
             </div>
           </div>
 
-          <div className="inline-block relative z-10 ">
+          {/* <div className="inline-block relative z-10 ">
             <li className="p-4 cursor-pointer font-bold">Gallery</li>
-          </div>
+          </div> */}
 
           <div className="inline-block relative z-10">
             <div className="flex justify-center">
@@ -276,21 +294,21 @@ const NavBar = () => {
                 open3 ? "submenu-open" : ""
               }  rounded bg-white z-20 text-gray-600`}>
               <div className="py-2 rounded bg-white z-20 text-gray-600">
-                <a href="#" className="block py-4">
+                <Link to="/about" className="block py-4" onClick={handleNav}>
                   About Us
-                </a>
-                <a href="#" className="block py-4">
+                </Link>
+                <Link to="meet_the_team" className="block py-4" onClick={handleNav}>
                   Meet The Team
-                </a>
-                <a href="#" className="block py-4">
+                </Link>
+                <Link to="safety" className="block py-4" onClick={handleNav}>
                   Safety
-                </a>
+                </Link>
               </div>
             </div>
           </div>
 
           <div className="inline-block relative z-10">
-            <li className="p-4 cursor-pointer font-bold">
+            <li className="p-4 cursor-pointer font-bold" onClick={handleNav}>
               <Link to="/contact">Contact Us</Link>
             </li>
           </div>

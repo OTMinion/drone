@@ -1,18 +1,13 @@
+import a from "../../assets/services/img-drone-photography-1-boathouse.jpg";
+import b from "../../assets/services/img-drone-photography-2-villa.jpg";
+import c from "../../assets/services/img-drone-photography-3-funfair.jpg";
+import d from "../../assets/services/img-drone-photography-4-wedding.jpg";
 import email from "../../assets/info.png";
+import phone from "../../assets/phone.png";
+
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import phone from "../../assets/phone.png";
-import howard from "../../assets/workshop/img-portrait-howard.jpg";
-
-import a from "../../assets/services/Mockingbird-Interior.webp";
-import b from "../../assets/services/Mockingbird-Exterior.webp";
-import c from "../../assets/services/On-a-Set.webp";
-import d from "../../assets/services/img-production-companies-2.jpg";
-import movie from "../../assets/services/movies.png";
-
-import { Link } from "react-router-dom";
-
-const Film_and_tv = () => {
+const Photography = () => {
   const [showPic1, setShowPic1] = useState(false);
   const [showPic2, setShowPic2] = useState(false);
   const [showPic3, setShowPic3] = useState(false);
@@ -50,47 +45,27 @@ const Film_and_tv = () => {
   };
 
   return (
-    <div className="px-6 pt-40">
-      <h1 className="text-3xl font-bold mb-6">Film & TV</h1>
-
+    <div className="px-8 pt-40">
+      <h1 className="text-4xl font-semibold mb-6">Drone Photography</h1>
       <p className="mb-4">
-        We are passionate about Film & TV, whether you’re creating a short film, full-length feature
-        or documentary, we’d be delighted to work with you to create epic traditional and FPV shots
-        that take your film to the next professional level.
+        While a lot of our focus is on creating superb cinematic eye-catching aerial video content,
+        we’re very aware that still images captured from the air are also brilliant for sharing a
+        unique perspective on a house, a subject, an event or a scene. We can capture up to 48
+        megapixel raw images using our drones, and they can be further enhanced making the images we
+        capture come alive. Images can be captured to a specific brief, or taken from the high
+        quality video footage we capture.
       </p>
       <p className="mb-4">
-        Many films nowadays require drone shots to make them look professional. This can either be
-        to provide establishing shots from the air, track objects (such as cars going along the
-        road), or give perspectives that are simply not possible from the ground.
+        Flexibility is important, and some of our drones also include telephoto lenses that allow us
+        to get shots that look incredibly detailed and close to the action, while maintaining a safe
+        distance; we have a lot of flexibility to get the kind of photos you’re after.
       </p>
       <p className="mb-4">
-        We can elevate your film or TV programme to new heights. We understand story and how getting
-        those beautiful visual shots can make a big impact on your storytelling while captivating
-        your audience through amazing visuals.
-      </p>
-      <p className="mb-4">
-        If you have a film or programme and are interested in us working with you to provide
-        stunning aerial footage, drop us a line at
-        <a
-          href="#"
-          onClick={(e) => {
-            e.preventDefault();
-            window.location.href = "mailto:Info@CinematicFPV.co.uk";
-          }}>
-          <img
-            src={email}
-            alt="Email us"
-            className="w-52 h-6 inline-block align-text-bottom ml-1"
-          />
-        </a>
-        , or get in touch with us via our{" "}
-        <Link to="/contact" className="underline cursor-pointer">
-          Contact Us
-        </Link>{" "}
-        page.
+        Why not get us to shoot a few photos from the air? They can be incredibly useful for
+        brochures, your website or social media.
       </p>
 
-      <div className="grid grid-cols-4 text-center gap-8">
+      <div className="grid md:grid-cols-4 text-center gap-8">
         <div className="flex flex-col">
           <div className="relative group mb-4 w-full h-48 cursor-pointer" onClick={toggle1}>
             <img
@@ -102,7 +77,7 @@ const Film_and_tv = () => {
               <span className="bg-black text-white px-3 py-1 rounded">Click to enlarge</span>
             </div>
           </div>
-          <h2 className="font-semibold mb-4">A premiere at the Mockingbird Cinema</h2>
+
           {showPic1 && (
             <div
               className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50 flex-col"
@@ -130,7 +105,7 @@ const Film_and_tv = () => {
               <span className="bg-black text-white px-3 py-1 rounded">Click to enlarge</span>
             </div>
           </div>
-          <h2 className="font-semibold mb-4">Mockingbird Cinema</h2>
+
           {showPic2 && (
             <div
               className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50"
@@ -138,7 +113,7 @@ const Film_and_tv = () => {
               <img
                 src={b}
                 alt="On Set for the film The Killing of Ava Jukes"
-                className="md:w-[80%] md:h-[90%]"
+                className="md:w-[80%] md:h-[80%]"
               />
             </div>
           )}
@@ -155,7 +130,7 @@ const Film_and_tv = () => {
               <span className="bg-black text-white px-3 py-1 rounded">Click to enlarge</span>
             </div>
           </div>
-          <h2 className="font-semibold mb-4">On Set for the film The Killing of Ava Jukes</h2>
+
           {showPic3 && (
             <div
               className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50"
@@ -180,7 +155,7 @@ const Film_and_tv = () => {
               <span className="bg-black text-white px-3 py-1 rounded">Click to enlarge</span>
             </div>
           </div>
-          <p className="font-semibold">On Set for the film Pawn and Kings</p>
+
           {showPic4 && (
             <div
               className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50"
@@ -191,51 +166,8 @@ const Film_and_tv = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-2 ml-20">
-        <img src={movie} />
-
-        <div>
-          <h2 className="text-2xl font-semibold mb-4 mt-20">The films we’ve worked on include:</h2>
-          <ul className="list-disc pl-6 mb-4">
-            <li>Stockhausen Syndrome</li>
-            <li>Road Trip</li>
-            <li>Distraction</li>
-            <li>Mediation</li>
-            <li>Pretence</li>
-            <li>Pawns and Kings</li>
-            <li>The Killing of Ava Jukes (forthcoming)</li>
-          </ul>
-        </div>
-      </div>
-
-      {/* Testimonial */}
-      <h1 className="text-2xl font-semibold mb-4 mt-10">Testimonial</h1>
-      <div className="grid grid-cols-10 mb-14">
-        <div className="col-span-2">
-          <img src={howard} className="w-60 h-60 mb-4 rounded" />
-          <cite>Howard Smith, award winning independent filmmaker</cite>
-        </div>
-
-        <blockquote className="p-4 italic border-l-4 bg-gray-100 text-gray-600 border-gray-500 mb-4 col-span-8">
-          <p className="mb-2">
-            “In 2022 I attended a Drone Day Workshop devised and presented by Steve Jakab. This was
-            really interesting, useful and informative, giving a detailed overview of different
-            kinds of drones and their capabilities, along with practical 'hands-on' experience. A
-            total professional, Steve also covers a number of important issues relating to the
-            legality of where and when various kinds of drones can be used. He has a wide range of
-            state-of-the-art drones, some of which he has designed and constructed himself, and the
-            quality of his aerial photography has to be seen to be believed. His enthusiasm for the
-            subject is evident, and his communication skills are superb. The workshop is
-            inspirational, and fully comprehensible for people of all ages. I can wholeheartedly and
-            unreservedly recommend this workshop to anyone and everyone who has any kind of interest
-            in drones or video photography.”
-          </p>
-        </blockquote>
-      </div>
-
-      {/* Contact Info */}
-      <p className="mb-4">
-        If you want to find out more what we can do for you, drop us a line at
+      <p>
+        If you would like us to take some aerial photographs for you, drop us a line at
         <a
           href="#"
           onClick={(e) => {
@@ -252,6 +184,7 @@ const Film_and_tv = () => {
         fill in the form below:
       </p>
 
+      {/* Contact Form */}
       <form ref={form} onSubmit={sendEmail} className="mt-4">
         <div className="mb-4">
           <input
@@ -287,4 +220,4 @@ const Film_and_tv = () => {
   );
 };
 
-export default Film_and_tv;
+export default Photography;

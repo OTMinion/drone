@@ -11,16 +11,17 @@ import client7 from "../assets/client7.webp";
 const Content = () => {
   return (
     <div>
-      <hr className="border-t border-gray-400 my-10 w-[90%] mx-auto" />
+      <hr className="border-t border-gray-400 my-10 w-[85%] mx-auto" />
 
       {/* ABOUT  */}
-      <div className="text-center w-[90%] mx-auto text-gray-600 text-md font-light">
+      <div className="text-center w-[80%] mx-auto text-gray-600 text-md font-light">
         <p className="mt-5">
-          Hey there! Ready for some high flying content? Our aerial filming services are unlike
-          anything you’ve seen before. We’re not just geeking out over the latest and greatest
-          aviation tech, we’re turning art into science with FPV and traditional drones that’ll make
-          your vision come to life. We’ve got incredible skills, and all the certifications to prove
-          it, so you can trust us to keep your project safe, sound!
+          Hi there! Are you ready for some aerial footage to sky rocket your message or brand? Our
+          aerial filming services can take you to giddy new heights by using cutting edge drone
+          videography to make your videos stand out from the rest. Whether you want a promo video
+          for your brand, or attention grabbing shots for social media, we’re here to help. Let’s
+          make your vision come to life by utilising our proprietary technology, vast experience,
+          amazing skills and passion to create something truly original and inspiring.
         </p>
 
         <p className="my-10">
@@ -35,13 +36,6 @@ const Content = () => {
         </p>
       </div>
 
-      <div className="flex items-center">
-        <hr className="border-t border-gray-400 my-20 w-[65%] ml-7 md:ml-36" />
-        <button className="bg-white border border-black hover:bg-black hover:text-white px-10 duration-300 text-sm md:text-xl mx-10 h-14 items-center ">
-          PROJECTS
-        </button>
-      </div>
-
       {/* BLACK SECTION */}
       <div className="bg-black my-10 h-auto">
         <div className="pt-5 pb-10">
@@ -52,7 +46,7 @@ const Content = () => {
           <iframe
             // width="1120"
             // height="630"
-            src="https://www.youtube.com/embed/u7EAcN6DLQE?si=RJjY3MtQO8P09OGX"
+            src="https://www.youtube.com/embed/pmJImae03Qc?si=LuJLozE73y7_KTr9"
             title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -62,10 +56,10 @@ const Content = () => {
       </div>
 
       {/* SERVICES SECTION */}
-      <div className="flex md:space-x-4 md:px-28 flex-col md:space-y-0 md:flex-row ">
+      <div className="flex md:space-x-4 md:px-16 flex-col md:space-y-0 md:flex-row ">
         <div className="flex-1 px-5">
-          <h1 className="text-4xl font-light">DRONE VIDEOGRAPHY SERVICES</h1>
-          <h2 className="text-4xl font-bold">THE SKY'S THE LIMIT</h2>
+          <h1 className="text-4xl font-light text-gray-400">DRONE VIDEOGRAPHY SERVICES</h1>
+          <h2 className="text-4xl ">THE SKY'S THE LIMIT</h2>
 
           <p className="py-5">
             Cinematic FPV is a specialist Drone filming organisation based in Birmingham with
@@ -146,7 +140,7 @@ const Content = () => {
             <iframe
               width="330"
               height="230"
-              src="https://www.youtube.com/embed/u7EAcN6DLQE?si=Y8Zi2I77OjmRjU3W"
+              src="https://www.youtube.com/embed/pmJImae03Qc?si=LuJLozE73y7_KTr9"
               title="YouTube video player"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

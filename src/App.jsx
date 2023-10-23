@@ -20,6 +20,7 @@ import Production from "./components/courses/Production";
 import Events from "./components/courses/Events";
 import Real_estate from "./components/courses/Real_estate";
 import Gallery from "./components/courses/Gallery";
+import Photography from "./components/courses/Photography";
 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
@@ -42,8 +43,7 @@ const App = () => {
               <>
                 <Hero />
                 <Content />
-                <Footer />
-                <Legal showCookie={showCookie} toggleCookie={toggleCookie} />
+
                 <Cookies
                   isShown={isCookiesVisible}
                   onClose={() => setIsCookiesVisible(false)}
@@ -65,8 +65,10 @@ const App = () => {
           <Route path="/events" element={<Events />} />
           <Route path="/real_estate" element={<Real_estate />} />
           <Route path="/gallery" element={<Gallery />} />
-          §§§§§§
+          <Route path="/photography" element={<Photography />} />
         </Routes>
+        <Footer />
+        <Legal showCookie={showCookie} toggleCookie={toggleCookie} />
       </div>
     </Router>
   );
