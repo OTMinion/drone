@@ -16,27 +16,104 @@ const Content = () => {
       {/* ABOUT  */}
       <div className="text-center w-[80%] mx-auto text-gray-600 text-md font-light">
         <p className="mt-5">
-          Hi there! Are you ready for some aerial footage to sky rocket your message or brand? Our
-          aerial filming services can take you to giddy new heights by using cutting edge drone
-          videography to make your videos stand out from the rest. Whether you want a promo video
-          for your brand, or attention grabbing shots for social media, we’re here to help. Let’s
-          make your vision come to life by utilising our proprietary technology, vast experience,
-          amazing skills and passion to create something truly original and inspiring.
+          Hi there! Are you ready for some aerial footage to sky rocket your message or brand? Our aerial
+          filming services can take you to giddy new heights by using cutting edge drone videography to make
+          your videos stand out from the rest. Whether you want a promo video for your brand, or attention
+          grabbing shots for social media, we’re here to help. Let’s make your vision come to life by
+          utilising our proprietary technology, vast experience, amazing skills and passion to create
+          something truly original and inspiring.
         </p>
 
         <p className="my-10">
-          With Cinematic FPV, you’re in safe hands. We are fully insured to fly safely in UK and
-          Europe, with the highest levels of qualifications possible and are fully registered with
-          the CAA (Civil Aviation Authority).
+          With Cinematic FPV, you’re in safe hands. We are fully insured to fly safely in UK and Europe, with
+          the highest levels of qualifications possible and are fully registered with the CAA (Civil Aviation
+          Authority).
         </p>
 
         <p>
-          Whatever kind of shots you’re after, we can provide beautiful, dynamic and head-turning
-          footage that will amaze you, so have a chat with us and see how we can help.
+          Whatever kind of shots you’re after, we can provide beautiful, dynamic and head-turning footage that
+          will amaze you, so have a chat with us and see how we can help.
         </p>
       </div>
 
-      
+      {/* 3 grid section */}
+      <div className="grid md:grid-cols-3 gap-10  text-center md:mx-20 mt-10 ">
+        <div className="px-5">
+          <h1 className="text-2xl font-semibold mb-4">FOR FILM</h1>
+          <p className="mb-4">
+            Want to show off your house beautifully, inside and out? Let’s do it. Whether it’s to sell, hire
+            out or promote, let’s do it beautifully.
+          </p>
+
+          <iframe
+            width="330"
+            height="230"
+            src="https://www.youtube.com/embed/pmJImae03Qc?si=LuJLozE73y7_KTr9"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen="true"
+            className="mx-auto pb-4"
+          ></iframe>
+        </div>
+        <div className="md:border-e-2 md:border-l-2 px-5">
+          <h1 className="text-2xl font-semibold mb-4">REAL ESTATE</h1>
+          <p className="mb-10">
+            We love film. Let’s create epic drone videography for your next film, from traditional shots to
+            dynamic FPV footage.
+          </p>
+          <iframe
+            width="330"
+            height="230"
+            src="https://www.youtube.com/embed/yjG76b70Lbo?si=hi0i7aYD45BDxbTP"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen="true"
+            className="mx-auto pb-4"
+          ></iframe>
+        </div>
+        <div className="px-5">
+          <h1 className="text-2xl font-semibold mb-4">DRONE TOURS</h1>
+          <p className="mb-10">
+            Want to show off an area, perhaps bringing in people, actions and different locations into one
+            shot? If so, a drone tour is for you.
+          </p>
+          <iframe
+            width="330"
+            height="230"
+            src="https://www.youtube.com/embed/uED0dRTZJpw?si=cWrJyq1LvAwEivlQ"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen="true"
+            className="mx-auto pb-4"
+          ></iframe>
+        </div>
+      </div>
+
+      <div className="flex flex-col md:flex-row md:ml-24 ml-8 mt-6">
+        <p className="pb-2">Other Categories:</p>
+        <div className="flex">
+          <p className="md:ml-4 group relative cursor-pointer">
+            Sports
+            <span className="absolute inset-x-0 top-6 h-[3px] bg-current transform scale-x-0 group-hover:scale-x-[110%] transition-transform "></span>
+          </p>
+          <p className="border-e-2 border-l-2 border-black md:mx-4 md:px-4 mx-2 px-2 group relative cursor-pointer">
+            Promotion
+            <span className="absolute inset-x-0 top-6 h-[3px] bg-current transform scale-x-0 group-hover:scale-x-[85%] transition-transform "></span>
+          </p>
+          <p className="border-e-2 border-black -ml-2 md:mr-4 md:px-4 pr-2 px-2 group relative cursor-pointer">
+            Events
+            <span className="absolute inset-x-0 top-6 h-[3px] bg-current transform scale-x-0 group-hover:scale-x-[85%] transition-transform "></span>
+          </p>
+          <p className="group relative cursor-pointer pl-2">
+            Locations
+            <span className="absolute inset-x-0 top-6 h-[3px] bg-current transform scale-x-0 group-hover:scale-x-[100%] transition-transform "></span>
+          </p>
+        </div>
+      </div>
+
       {/* BLACK SECTION */}
       <div className="bg-black my-10 h-auto">
         <div className="pt-5 pb-10">
@@ -52,7 +129,8 @@ const Content = () => {
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen="true"
-            className="mx-auto w-[80%] h-[80%] md:w-[1120px] md:h-[630px]"></iframe>
+            className="mx-auto w-[80%] h-[80%] md:w-[1120px] md:h-[630px]"
+          ></iframe>
         </div>
       </div>
 
@@ -63,13 +141,11 @@ const Content = () => {
           <h2 className="text-4xl ">THE SKY'S THE LIMIT</h2>
 
           <p className="py-5">
-            Cinematic FPV is a specialist Drone filming organisation based in Birmingham with
-            expertise that includes unrivalled drone videography and photography services.
+            Cinematic FPV is a specialist Drone filming organisation based in Birmingham with expertise that
+            includes unrivalled drone videography and photography services.
           </p>
 
-          <p className="pb-5">
-            Cinematic FPV offers a wide range of videography services that includes:
-          </p>
+          <p className="pb-5">Cinematic FPV offers a wide range of videography services that includes:</p>
 
           <div className="pl-5 space-y-1">
             <li>Drone filming in and around Birmingham, the UK and Europe</li>
@@ -79,7 +155,7 @@ const Content = () => {
 
           <div className="pt-5 pb-10  pl-20">
             <button className="cursor-pointer border border-gray-400 rounded-lg px-5 py-3 bg-black text-white">
-              Contact Us
+              <Link to="/contact">Contact Us</Link>
             </button>
           </div>
 
@@ -90,20 +166,20 @@ const Content = () => {
 
         <div className="flex-1 px-5">
           <p>
-            We specialise in using the best, cutting edge technology, from 4K camera systems,
-            optimised HDR imagery, gyro-based stabilisation, up to 48 megapixel still images making
-            our unmanned aerial vehicles (UAVs) an invaluable asset to your projects.
+            We specialise in using the best, cutting edge technology, from 4K camera systems, optimised HDR
+            imagery, gyro-based stabilisation, up to 48 megapixel still images making our unmanned aerial
+            vehicles (UAVs) an invaluable asset to your projects.
           </p>
 
           <p className="py-5">
-            Our clients have used our aerial drone photography, filming and video services for a
-            wide variety operations:
+            Our clients have used our aerial drone photography, filming and video services for a wide variety
+            operations:
           </p>
 
           <div className="pl-5 space-y-1">
             <li>
-              Aerial corporate videos for advertising and promotion on their websites and Social
-              Media platforms
+              Aerial corporate videos for advertising and promotion on their websites and Social Media
+              platforms
             </li>
             <li>Aerial drone photography for Estate Agents</li>
             <li>Commercial property aerial photography</li>
@@ -114,30 +190,20 @@ const Content = () => {
           </div>
 
           <p className="py-5">
-            Using our proprietary drone designs as well as specially chosen commercial drones, we
-            are permitted to fly in cities, indoors, and over people – safely. We are fully CAA
-            licensed and approved and insured to high levels of cover to deliver breathtaking
-            footage for your projects.
+            Using our proprietary drone designs as well as specially chosen commercial drones, we are
+            permitted to fly in cities, indoors, and over people – safely. We are fully CAA licensed and
+            approved and insured to high levels of cover to deliver breathtaking footage for your projects.
           </p>
 
           <p>
-            We are also permitted to fly in cities, at night and indoors as we not only have the
-            various CAA and insurance approvals but we also have the specialised FPV and Commercial
-            drones available to deliver the project.
+            We are also permitted to fly in cities, at night and indoors as we not only have the various CAA
+            and insurance approvals but we also have the specialised FPV and Commercial drones available to
+            deliver the project.
           </p>
         </div>
 
         <div className="flex-1 px-5">
-          <p>
-            We specialize in cinematic drone videography, catering to diverse needs: be it{" "}
-            <span className="font-bold">film productions</span>,{" "}
-            <span className="font-bold">real estate </span>
-            highlights, or immersive <span className="font-bold">drone tours</span>. Elevate your
-            visuals with our expertise.
-          </p>
           <div>
-            <h1 className="text-center font-bold text-2xl mt-3">FILM PRODUCTION</h1>
-
             <iframe
               width="330"
               height="230"
@@ -145,11 +211,11 @@ const Content = () => {
               title="YouTube video player"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen="true"></iframe>
+              allowfullscreen="true"
+            ></iframe>
           </div>
 
           <div className="pt-4">
-            <h1 className="text-center font-bold text-2xl">REAL ESTATE</h1>
             <iframe
               width="330"
               height="230"
@@ -157,11 +223,11 @@ const Content = () => {
               title="YouTube video player"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen="true"></iframe>
+              allowfullscreen="true"
+            ></iframe>
           </div>
 
           <div className="pt-4">
-            <h1 className="text-center font-bold text-2xl">DRONE TOURS</h1>
             <iframe
               width="330"
               height="230"
@@ -169,7 +235,8 @@ const Content = () => {
               title="YouTube video player"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen="true"></iframe>
+              allowfullscreen="true"
+            ></iframe>
           </div>
         </div>
       </div>
@@ -218,22 +285,22 @@ const Content = () => {
           <div>
             <h1 className="text-lg">COMPLETE DRONE FILMING SERVICE</h1>
             <p className="text-gray-400 mt-3 text-left px-6">
-              Briefing, planning, filming, and editing all completed in one place to make the
-              process smooth for clients
+              Briefing, planning, filming, and editing all completed in one place to make the process smooth
+              for clients
             </p>
           </div>
           <div>
             <h1 className="text-lg ">ALWAYS ACCESSIBLE TO OUR CLIENTS</h1>
             <p className="text-gray-400 mt-3 text-left px-6">
-              We’re always available for our clients from planning, filming and editing, and we’re
-              always communicating.
+              We’re always available for our clients from planning, filming and editing, and we’re always
+              communicating.
             </p>
           </div>
           <div>
             <h1 className="text-lg">CAA QUALIFIED WITH PUBLIC LIABILITY INSURANCE</h1>
             <p className="text-gray-400 mt-3 text-left px-6">
-              Our qualifications, insurance and experience ensures you have complete peace of mind
-              while we’re filming on site.
+              Our qualifications, insurance and experience ensures you have complete peace of mind while we’re
+              filming on site.
             </p>
           </div>
         </div>
