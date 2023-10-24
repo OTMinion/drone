@@ -4,7 +4,7 @@ const TraditionalDroneFilming = () => {
   return (
     <div className="bg-gray-200  pt-32">
       <div className=" mx-auto bg-white p-6 rounded-lg shadow-md">
-        <img src={a} className="w-full h-96 object-cover object-center" />
+        <img src={a} className="w-full  md:h-96 object-cover object-center" />
 
         <h1 className="text-3xl font-bold mb-4 mt-5">Traditional Drone Filming</h1>
         <p className="text-gray-700 mb-6">

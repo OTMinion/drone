@@ -54,34 +54,31 @@ const Film_and_tv = () => {
       <h1 className="text-3xl font-bold mb-6">Film & TV</h1>
 
       <p className="mb-4">
-        We are passionate about Film & TV, whether you’re creating a short film, full-length feature
-        or documentary, we’d be delighted to work with you to create epic traditional and FPV shots
-        that take your film to the next professional level.
+        We are passionate about Film & TV, whether you’re creating a short film, full-length feature or
+        documentary, we’d be delighted to work with you to create epic traditional and FPV shots that take
+        your film to the next professional level.
       </p>
       <p className="mb-4">
-        Many films nowadays require drone shots to make them look professional. This can either be
-        to provide establishing shots from the air, track objects (such as cars going along the
-        road), or give perspectives that are simply not possible from the ground.
+        Many films nowadays require drone shots to make them look professional. This can either be to provide
+        establishing shots from the air, track objects (such as cars going along the road), or give
+        perspectives that are simply not possible from the ground.
       </p>
       <p className="mb-4">
-        We can elevate your film or TV programme to new heights. We understand story and how getting
-        those beautiful visual shots can make a big impact on your storytelling while captivating
-        your audience through amazing visuals.
+        We can elevate your film or TV programme to new heights. We understand story and how getting those
+        beautiful visual shots can make a big impact on your storytelling while captivating your audience
+        through amazing visuals.
       </p>
       <p className="mb-4">
-        If you have a film or programme and are interested in us working with you to provide
-        stunning aerial footage, drop us a line at
+        If you have a film or programme and are interested in us working with you to provide stunning aerial
+        footage, drop us a line at
         <a
           href="#"
           onClick={(e) => {
             e.preventDefault();
             window.location.href = "mailto:Info@CinematicFPV.co.uk";
-          }}>
-          <img
-            src={email}
-            alt="Email us"
-            className="w-52 h-6 inline-block align-text-bottom ml-1"
-          />
+          }}
+        >
+          <img src={email} alt="Email us" className="w-52 h-6 inline-block align-text-bottom ml-1" />
         </a>
         , or get in touch with us via our{" "}
         <Link to="/contact" className="underline cursor-pointer">
@@ -90,7 +87,7 @@ const Film_and_tv = () => {
         page.
       </p>
 
-      <div className="grid grid-cols-4 text-center gap-8">
+      <div className="grid md:grid-cols-4 text-center gap-8">
         <div className="flex flex-col">
           <div className="relative group mb-4 w-full h-48 cursor-pointer" onClick={toggle1}>
             <img
@@ -106,14 +103,10 @@ const Film_and_tv = () => {
           {showPic1 && (
             <div
               className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50 flex-col"
-              onClick={toggle1}>
+              onClick={toggle1}
+            >
               <div className="bg-white md:w-[80%] md:h-[80%] relative rounded-lg">
-                <img
-                  src={a}
-                  alt=""
-                  className="mb-4 w-full h-full"
-                  onClick={(e) => e.stopPropagation()}
-                />
+                <img src={a} alt="" className="mb-4 w-full h-full" onClick={(e) => e.stopPropagation()} />
               </div>
             </div>
           )}
@@ -134,7 +127,8 @@ const Film_and_tv = () => {
           {showPic2 && (
             <div
               className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50"
-              onClick={toggle2}>
+              onClick={toggle2}
+            >
               <img
                 src={b}
                 alt="On Set for the film The Killing of Ava Jukes"
@@ -159,12 +153,9 @@ const Film_and_tv = () => {
           {showPic3 && (
             <div
               className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50"
-              onClick={toggle3}>
-              <img
-                src={c}
-                alt="On Set for the film Pawn and Kings"
-                className="md:w-[80%] md:h-[80%]"
-              />
+              onClick={toggle3}
+            >
+              <img src={c} alt="On Set for the film Pawn and Kings" className="md:w-[80%] md:h-[80%]" />
             </div>
           )}
         </div>
@@ -184,18 +175,19 @@ const Film_and_tv = () => {
           {showPic4 && (
             <div
               className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50"
-              onClick={toggle4}>
+              onClick={toggle4}
+            >
               <img src={d} alt="Film & TV Blurays" className="md:w-[80%] md:h-[80%]" />
             </div>
           )}
         </div>
       </div>
 
-      <div className="grid grid-cols-2 ml-20">
+      <div className="grid md:grid-cols-2 md:ml-20 mt-4">
         <img src={movie} />
 
         <div>
-          <h2 className="text-2xl font-semibold mb-4 mt-20">The films we’ve worked on include:</h2>
+          <h2 className="text-2xl font-semibold mb-4 md:mt-20 mt-4">The films we’ve worked on include:</h2>
           <ul className="list-disc pl-6 mb-4">
             <li>Stockhausen Syndrome</li>
             <li>Road Trip</li>
@@ -210,25 +202,24 @@ const Film_and_tv = () => {
 
       {/* Testimonial */}
       <h1 className="text-2xl font-semibold mb-4 mt-10">Testimonial</h1>
-      <div className="grid grid-cols-10 mb-14">
-        <div className="col-span-2">
+      <div className="grid md:grid-cols-10 mb-14">
+        <div className="pl-10 md:pl-0 col-span-8">
           <img src={howard} className="w-60 h-60 mb-4 rounded" />
           <cite>Howard Smith, award winning independent filmmaker</cite>
         </div>
 
-        <blockquote className="p-4 italic border-l-4 bg-gray-100 text-gray-600 border-gray-500 mb-4 col-span-8">
+        <blockquote className="p-4 italic border-l-4 bg-gray-100 text-gray-600 border-gray-500 md:mb-4 col-span-8">
           <p className="mb-2">
-            “In 2022 I attended a Drone Day Workshop devised and presented by Steve Jakab. This was
-            really interesting, useful and informative, giving a detailed overview of different
-            kinds of drones and their capabilities, along with practical 'hands-on' experience. A
-            total professional, Steve also covers a number of important issues relating to the
-            legality of where and when various kinds of drones can be used. He has a wide range of
-            state-of-the-art drones, some of which he has designed and constructed himself, and the
-            quality of his aerial photography has to be seen to be believed. His enthusiasm for the
-            subject is evident, and his communication skills are superb. The workshop is
-            inspirational, and fully comprehensible for people of all ages. I can wholeheartedly and
-            unreservedly recommend this workshop to anyone and everyone who has any kind of interest
-            in drones or video photography.”
+            “In 2022 I attended a Drone Day Workshop devised and presented by Steve Jakab. This was really
+            interesting, useful and informative, giving a detailed overview of different kinds of drones and
+            their capabilities, along with practical 'hands-on' experience. A total professional, Steve also
+            covers a number of important issues relating to the legality of where and when various kinds of
+            drones can be used. He has a wide range of state-of-the-art drones, some of which he has designed
+            and constructed himself, and the quality of his aerial photography has to be seen to be believed.
+            His enthusiasm for the subject is evident, and his communication skills are superb. The workshop
+            is inspirational, and fully comprehensible for people of all ages. I can wholeheartedly and
+            unreservedly recommend this workshop to anyone and everyone who has any kind of interest in drones
+            or video photography.”
           </p>
         </blockquote>
       </div>
@@ -241,15 +232,12 @@ const Film_and_tv = () => {
           onClick={(e) => {
             e.preventDefault();
             window.location.href = "mailto:Info@CinematicFPV.co.uk";
-          }}>
-          <img
-            src={email}
-            alt="Email us"
-            className="w-52 h-6 inline-block align-text-bottom ml-1"
-          />
+          }}
+        >
+          <img src={email} alt="Email us" className="w-52 h-6 inline-block align-text-bottom ml-1" />
         </a>
-        , call us on <img src={phone} className="w-32 h-5 inline-block align-text-bottom ml-1" /> or
-        fill in the form below:
+        , call us on <img src={phone} className="w-32 h-5 inline-block align-text-bottom ml-1" /> or fill in
+        the form below:
       </p>
 
       <form ref={form} onSubmit={sendEmail} className="mt-4">
@@ -273,7 +261,8 @@ const Film_and_tv = () => {
           <textarea
             name="message"
             placeholder="Your message"
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline h-32"></textarea>
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline h-32"
+          ></textarea>
         </div>
         <div className="flex justify-center">
           <input

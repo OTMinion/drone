@@ -22,7 +22,10 @@ import Real_estate from "./components/courses/Real_estate";
 import Gallery from "./components/courses/Gallery";
 import Photography from "./components/courses/Photography";
 
+
+
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { TbH1 } from "react-icons/tb";
 
 const App = () => {
   const [showCookie, setShowCookie] = useState(false);

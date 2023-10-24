@@ -36,6 +36,7 @@ const Content = () => {
         </p>
       </div>
 
+      
       {/* BLACK SECTION */}
       <div className="bg-black my-10 h-auto">
         <div className="pt-5 pb-10">

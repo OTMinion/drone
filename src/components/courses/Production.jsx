@@ -23,19 +23,19 @@ const Production = () => {
 
   return (
     <div className="px-8 pt-40">
-      <h1 className="text-3xl font-bold mb-6">Working with Production Companies</h1>
+      <h1 className="text-2xl md:text-3xl font-bold mb-6">Working with Production Companies</h1>
 
       {/* Clapperboard Image */}
       <img src="path_to_clapperboard_image.jpg" alt="Clapperboard" className="mb-4 w-full" />
 
       <p className="mb-4">
-        We also work directly with production companies. Let’s face it, managing a fleet of
-        cutting-edge drones (and associated equipment), keeping up with qualifications and the
-        constant changes in the law, not to mention having many years’ of experience in flying is
-        not something that every production company can afford to do in-house. That is why working
-        in collaboration with us to provide epic drone footage for you makes so much sense; you can
-        focus on coming up with the video ideas, writing, producing, directing, post-production
-        activities etc. and we will work with you to supply the amazing aerial footage you need.
+        We also work directly with production companies. Let’s face it, managing a fleet of cutting-edge
+        drones (and associated equipment), keeping up with qualifications and the constant changes in the law,
+        not to mention having many years’ of experience in flying is not something that every production
+        company can afford to do in-house. That is why working in collaboration with us to provide epic drone
+        footage for you makes so much sense; you can focus on coming up with the video ideas, writing,
+        producing, directing, post-production activities etc. and we will work with you to supply the amazing
+        aerial footage you need.
       </p>
 
       {/* Image with grey border */}
@@ -61,11 +61,13 @@ const Production = () => {
         <iframe
           className="mb-4 md:w-[600px] md:h-96"
           src="https://www.youtube.com/embed/TgLusR6vdH0"
-          title="Tag Rugby video"></iframe>
+          title="Tag Rugby video"
+        ></iframe>
         <iframe
           className="mb-4 md:w-[600px] md:h-96"
           src="https://www.youtube.com/embed/_4fXCE0YsvQ"
-          title="Millennium Point video"></iframe>
+          title="Millennium Point video"
+        ></iframe>
       </div>
 
       <p className="mb-4">
@@ -75,15 +77,12 @@ const Production = () => {
           onClick={(e) => {
             e.preventDefault();
             window.location.href = "mailto:Info@CinematicFPV.co.uk";
-          }}>
-          <img
-            src={email}
-            alt="Email us"
-            className="w-52 h-6 inline-block align-text-bottom ml-1"
-          />
+          }}
+        >
+          <img src={email} alt="Email us" className="w-52 h-6 inline-block align-text-bottom ml-1" />
         </a>
-        , call us on <img src={phone} className="w-32 h-5 inline-block align-text-bottom ml-1" /> or
-        fill in the form below:
+        , call us on <img src={phone} className="w-32 h-5 inline-block align-text-bottom ml-1" /> or fill in
+        the form below:
       </p>
 
       {/* Contact Form */}
@@ -108,7 +107,8 @@ const Production = () => {
           <textarea
             name="message"
             placeholder="Your message"
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline h-32"></textarea>
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline h-32"
+          ></textarea>
         </div>
         <div className="flex justify-center">
           <input
