@@ -33,3 +33,31 @@ input:checked ~ .dot {
   transform: translateY(0);
   transition: opacity 0.2s, transform 0.2s, visibility 0.2s;
 }
+
+.custom-border-e {
+  position: relative;
+}
+
+.custom-border-e::after {
+  content: "";
+  position: absolute;
+  top: 10%; /* adjust as needed */
+  bottom: 20%; /* adjust as needed */
+  right: 0;
+  width: 2px; /* adjust as needed */
+  background-color: currentColor;
+}
+
+.custom-border-l {
+  position: relative;
+}
+
+.custom-border-l::before {
+  content: "";
+  position: absolute;
+  top: 10%; /* adjust as needed */
+  bottom: 20%; /* adjust as needed */
+  left: 0;
+  width: 2px; /* adjust as needed */
+  background-color: currentColor;
+}

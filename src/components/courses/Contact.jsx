@@ -1,24 +1,35 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import ReCAPTCHA from "react-google-recaptcha";
 import email from "../../assets/gmail.png";
 import { TbHandFinger } from "react-icons/tb";
 import a from "../../assets/contact.jpg";
 
 const Contact = () => {
   const form = useRef();
+  const [recaptchaValue, setRecaptchaValue] = useState(null);
 
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm("service_ur31oum", "template_wrjygli", form.current, "ln-Sal_bmzck9Jt-Q").then(
-      (result) => {
-        console.log(result.text);
-        alert("email sent");
-      },
-      (error) => {
-        console.log(error.text);
-      }
-    );
+    if (recaptchaValue) {
+      // Ensure reCAPTCHA is checked
+      emailjs.sendForm("service_ur31oum", "template_wrjygli", form.current, "ln-Sal_bmzck9Jt-Q").then(
+        (result) => {
+          console.log(result.text);
+          alert("email sent");
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    } else {
+      alert("Please complete the reCAPTCHA verification");
+    }
+  };
+
+  const onRecaptchaChange = (value) => {
+    setRecaptchaValue(value);
   };
 
   return (
@@ -70,6 +81,9 @@ const Contact = () => {
               placeholder="Your message"
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline h-32"
             ></textarea>
+          </div>
+          <div className="flex justify-center mb-4">
+            <ReCAPTCHA sitekey="6LdS-egoAAAAAMUw4AmnEWitz057m6Z7RRjnUphj" onChange={onRecaptchaChange} />
           </div>
           <div className="flex justify-center">
             <input

@@ -37,73 +37,67 @@ const Content = () => {
       </div>
 
       {/* 3 grid section */}
-      <div className="grid md:grid-cols-3 gap-10  text-center md:mx-20 mt-10 ">
-        <div className="px-5">
+      <div className="grid lg:grid-cols-3 gap-10  text-center md:mx-20 mt-10 ">
+        <div className="px-5 pb-10 lg:pb-0">
           <h1 className="text-2xl font-semibold mb-4">FOR FILM</h1>
-          <p className="mb-4">
+          <p className="mb-4 -mx-4">
             Want to show off your house beautifully, inside and out? Let’s do it. Whether it’s to sell, hire
             out or promote, let’s do it beautifully.
           </p>
 
           <iframe
-            width="330"
-            height="230"
             src="https://www.youtube.com/embed/pmJImae03Qc?si=LuJLozE73y7_KTr9"
             title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen="true"
-            className="mx-auto pb-4"
+            className=" w-[90%] h-[70%] mx-auto"
           ></iframe>
         </div>
-        <div className="md:border-e-2 md:border-l-2 px-5">
+        <div className="md:border-e-2 md:border-l-2 px-5 pb-10 lg:pb-0">
           <h1 className="text-2xl font-semibold mb-4">REAL ESTATE</h1>
-          <p className="mb-10">
+          <p className="mb-4">
             We love film. Let’s create epic drone videography for your next film, from traditional shots to
             dynamic FPV footage.
           </p>
           <iframe
-            width="330"
-            height="230"
             src="https://www.youtube.com/embed/yjG76b70Lbo?si=hi0i7aYD45BDxbTP"
             title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen="true"
-            className="mx-auto pb-4"
+            className=" w-[90%] h-[70%] mx-auto"
           ></iframe>
         </div>
         <div className="px-5">
           <h1 className="text-2xl font-semibold mb-4">DRONE TOURS</h1>
-          <p className="mb-10">
+          <p className="mb-4">
             Want to show off an area, perhaps bringing in people, actions and different locations into one
             shot? If so, a drone tour is for you.
           </p>
           <iframe
-            width="330"
-            height="230"
             src="https://www.youtube.com/embed/uED0dRTZJpw?si=cWrJyq1LvAwEivlQ"
             title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen="true"
-            className="mx-auto pb-4"
+            className=" w-[90%] h-[70%] mx-auto"
           ></iframe>
         </div>
       </div>
 
-      <div className="flex flex-col md:flex-row md:ml-24 ml-8 mt-6">
+      <div className="flex flex-col md:flex-row md:ml-24 ml-8 mt-32 ">
         <p className="pb-2">Other Categories:</p>
         <div className="flex">
           <p className="md:ml-4 group relative cursor-pointer">
             Sports
             <span className="absolute inset-x-0 top-6 h-[3px] bg-current transform scale-x-0 group-hover:scale-x-[110%] transition-transform "></span>
           </p>
-          <p className="border-e-2 border-l-2 border-black md:mx-4 md:px-4 mx-2 px-2 group relative cursor-pointer">
+          <p className="custom-border-e custom-border-l  border-black md:mx-4 md:px-4 mx-2 px-2 group relative cursor-pointer">
             Promotion
             <span className="absolute inset-x-0 top-6 h-[3px] bg-current transform scale-x-0 group-hover:scale-x-[85%] transition-transform "></span>
           </p>
-          <p className="border-e-2 border-black -ml-2 md:mr-4 md:px-4 pr-2 px-2 group relative cursor-pointer">
+          <p className="custom-border-e border-black -ml-2 md:mr-4 md:px-4 pr-2 px-2 group relative cursor-pointer">
             Events
             <span className="absolute inset-x-0 top-6 h-[3px] bg-current transform scale-x-0 group-hover:scale-x-[85%] transition-transform "></span>
           </p>
@@ -135,7 +129,7 @@ const Content = () => {
       </div>
 
       {/* SERVICES SECTION */}
-      <div className="flex md:space-x-4 md:px-16 flex-col md:space-y-0 md:flex-row ">
+      <div className="flex lg:space-x-4 lg:px-16 flex-col lg:space-y-0 lg:flex-row ">
         <div className="flex-1 px-5">
           <h1 className="text-4xl font-light text-gray-400">DRONE VIDEOGRAPHY SERVICES</h1>
           <h2 className="text-4xl ">THE SKY'S THE LIMIT</h2>
@@ -205,37 +199,34 @@ const Content = () => {
         <div className="flex-1 px-5">
           <div>
             <iframe
-              width="330"
-              height="230"
               src="https://www.youtube.com/embed/pmJImae03Qc?si=LuJLozE73y7_KTr9"
               title="YouTube video player"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowfullscreen="true"
+              className="mx-auto w-[80%] h-[80%] lg:w-[330px] lg:h-[230px]"
             ></iframe>
           </div>
 
           <div className="pt-4">
             <iframe
-              width="330"
-              height="230"
               src="https://www.youtube.com/embed/yjG76b70Lbo?si=hi0i7aYD45BDxbTP"
               title="YouTube video player"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowfullscreen="true"
+              className="mx-auto w-[80%] h-[80%] lg:w-[330px] lg:h-[230px]"
             ></iframe>
           </div>
 
           <div className="pt-4">
             <iframe
-              width="330"
-              height="230"
               src="https://www.youtube.com/embed/uED0dRTZJpw?si=cWrJyq1LvAwEivlQ"
               title="YouTube video player"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowfullscreen="true"
+              className="mx-auto w-[80%] h-[80%] lg:w-[330px] lg:h-[230px]"
             ></iframe>
           </div>
         </div>
@@ -279,11 +270,11 @@ const Content = () => {
 
       {/* THE SKY THE LIMIT */}
       <div className="text-center mt-16 ">
-        <h1 className="text-3xl md:text-5xl">THE SKY'S THE LIMIT</h1>
+        <h1 className="text-3xl md:text-5xl ">THE SKY'S THE LIMIT</h1>
 
         <div className="flex  grid-cols-3 w-4/5 mx-auto mt-16 gap-14 md:flex-row flex-col">
           <div>
-            <h1 className="text-lg">COMPLETE DRONE FILMING SERVICE</h1>
+            <h1 className="text-lg ">COMPLETE DRONE FILMING SERVICE</h1>
             <p className="text-gray-400 mt-3 text-left px-6">
               Briefing, planning, filming, and editing all completed in one place to make the process smooth
               for clients
@@ -291,13 +282,13 @@ const Content = () => {
           </div>
           <div>
             <h1 className="text-lg ">ALWAYS ACCESSIBLE TO OUR CLIENTS</h1>
-            <p className="text-gray-400 mt-3 text-left px-6">
+            <p className="text-gray-400 mt-3 text-left px-4">
               We’re always available for our clients from planning, filming and editing, and we’re always
               communicating.
             </p>
           </div>
           <div>
-            <h1 className="text-lg">CAA QUALIFIED WITH PUBLIC LIABILITY INSURANCE</h1>
+            <h1 className="text-lg ">CAA QUALIFIED WITH PUBLIC LIABILITY INSURANCE</h1>
             <p className="text-gray-400 mt-3 text-left px-6">
               Our qualifications, insurance and experience ensures you have complete peace of mind while we’re
               filming on site.
@@ -305,6 +296,8 @@ const Content = () => {
           </div>
         </div>
       </div>
+
+      {/* Blog */}
     </div>
   );
 };

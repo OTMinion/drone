@@ -203,7 +203,7 @@ const Film_and_tv = () => {
       {/* Testimonial */}
       <h1 className="text-2xl font-semibold mb-4 mt-10">Testimonial</h1>
       <div className="grid md:grid-cols-10 mb-14">
-        <div className="pl-10 md:pl-0 col-span-8">
+        <div className="pl-10 md:pl-0 md:col-span-2 col-span-10">
           <img src={howard} className="w-60 h-60 mb-4 rounded" />
           <cite>Howard Smith, award winning independent filmmaker</cite>
         </div>

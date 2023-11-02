@@ -1,10 +1,13 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
+import PostDetail from "./components/PostDetail";
+import { GET_POST } from "./Graphql/Queries";
+
 import NavBar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Footer from "./components/Footer";
 import Content from "./components/Content";
 import Legal from "./components/Legal";
-import Cookies from "./components/Cookies";
 
 // menu items link
 import Workshop from "./components/courses/Workshop"; // Make sure the path is correct
@@ -22,21 +25,57 @@ import Real_estate from "./components/courses/Real_estate";
 import Gallery from "./components/courses/Gallery";
 import Photography from "./components/courses/Photography";
 
+const formatDate = (dateString) => {
+  const date = new Date(dateString);
+  const year = date.getFullYear();
+  const month = date.toLocaleString("default", { month: "long" });
+  const day = date.getDate();
 
+  return `${month} ${day}, ${year}`;
+};
 
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { TbH1 } from "react-icons/tb";
+const AllPosts = ({ posts }) => (
+  <>
+    <h1 className="text-5xl font-light text-center pt-16 pb-10">
+      BE <span className="font-semibold">INSPIRED</span>
+    </h1>
+    <div className="grid grid-cols-3 gap-10 px-20">
+      {posts.map((post) => (
+        <div key={post.id} className=" p-4">
+          <Link to={`/${post.slug}`} className="block">
+            <h2 className="text-2xl font-semibold">{post.title}</h2>
+            {post.coverPhoto && post.coverPhoto.url && (
+              <img src={post.coverPhoto.url} alt={post.title} className="mt-4" />
+            )}
+          </Link>
+
+          <hr className="border-t border-gray-400 mt-10 mb-4" />
+          <p className="italic">{formatDate(post.updatedAt)}</p>
+        </div>
+      ))}
+    </div>
+  </>
+);
 
 const App = () => {
-  const [showCookie, setShowCookie] = useState(false);
+  const [posts, setPosts] = useState([]);
+  const [error, setError] = useState(null);
 
-  const toggleCookie = () => {
-    setShowCookie(!showCookie);
-  };
-  const [isCookiesVisible, setIsCookiesVisible] = useState(true);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const result = await GET_POST();
+        setPosts(result.posts);
+      } catch (err) {
+        setError("Error fetching data");
+      }
+    };
+    fetchData();
+  }, []);
 
   return (
     <Router>
+      {error && <p>{error}</p>}
       <div className="font-montserrat">
         <NavBar />
         <Routes>
@@ -46,15 +85,11 @@ const App = () => {
               <>
                 <Hero />
                 <Content />
-
-                <Cookies
-                  isShown={isCookiesVisible}
-                  onClose={() => setIsCookiesVisible(false)}
-                  onManage={toggleCookie} // Passing the toggleCookie function here
-                />
+                <AllPosts posts={posts} /> {/* Added this line to include AllPosts */}
               </>
             }
           />
+
           <Route path="/workshop" element={<Workshop />} />
           <Route path="/about" element={<About />} />
           <Route path="/meet_the_team" element={<Meet_the_team />} />
@@ -69,9 +104,10 @@ const App = () => {
           <Route path="/real_estate" element={<Real_estate />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/photography" element={<Photography />} />
+          <Route path="/:slug" element={<PostDetail />} />
         </Routes>
         <Footer />
-        <Legal showCookie={showCookie} toggleCookie={toggleCookie} />
+        <Legal />
       </div>
     </Router>
   );
