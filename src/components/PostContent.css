@@ -1,0 +1,13 @@
+/* Add 20px margin between <p> and <video> */
+p + video,
+video + p,
+p + img,
+img + p {
+  margin-top: 20px;
+}
+
+/* Resize bold text to 3rem */
+strong,
+b {
+  font-size: 2.5rem;
+}
