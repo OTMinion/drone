@@ -4,13 +4,17 @@ import emailjs from "@emailjs/browser";
 import phone from "../../assets/phone.png";
 import a from "../../assets/services/img-production-companies-2.jpg";
 
+const x = import.meta.env.VITE_e1;
+const y = import.meta.env.VITE_e2;
+const z = import.meta.env.VITE_e3;
+
 const Production = () => {
   const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm("service_ur31oum", "template_wrjygli", form.current, "ln-Sal_bmzck9Jt-Q").then(
+    emailjs.sendForm(x, y, form.current, z).then(
       (result) => {
         console.log(result.text);
         alert("email sent");
