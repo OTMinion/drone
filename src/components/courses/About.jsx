@@ -3,6 +3,8 @@ import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import ReCAPTCHA from "react-google-recaptcha";
 
+const API_KEY = import.meta.env.VITE_CAPCHA_API;
+
 const About = () => {
   const startDate = new Date(2016, 0, 1); // 0 is January in JavaScript's Date object
   const currentDate = new Date();
@@ -100,7 +102,7 @@ const About = () => {
           ></textarea>
         </div>
         <div className="flex justify-center mb-4">
-          <ReCAPTCHA sitekey="6LdS-egoAAAAAMUw4AmnEWitz057m6Z7RRjnUphj" onChange={onRecaptchaChange} />
+          <ReCAPTCHA sitekey={API_KEY} onChange={onRecaptchaChange} />
         </div>
         <div className="flex justify-center">
           <input
