@@ -9,6 +9,8 @@ const x = import.meta.env.VITE_e1;
 const y = import.meta.env.VITE_e2;
 const z = import.meta.env.VITE_e3;
 
+const API_KEY = import.meta.env.VITE_CAPCHA_API;
+
 const Contact = () => {
   const form = useRef();
   const [recaptchaValue, setRecaptchaValue] = useState(null);
@@ -87,7 +89,7 @@ const Contact = () => {
             ></textarea>
           </div>
           <div className="flex justify-center mb-4">
-            <ReCAPTCHA sitekey="6LdS-egoAAAAAMUw4AmnEWitz057m6Z7RRjnUphj" onChange={onRecaptchaChange} />
+            <ReCAPTCHA sitekey={API_KEY} onChange={onRecaptchaChange} />
           </div>
           <div className="flex justify-center">
             <input
