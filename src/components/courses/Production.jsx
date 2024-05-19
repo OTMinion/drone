@@ -1,8 +1,8 @@
 import email from "../../assets/info.png";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import phone from "../../assets/phone.png";
-import a from "../../assets/services/img-production-companies-2.jpg";
+import a from "../../assets/steve_backpack.webp";
 
 const x = import.meta.env.VITE_e1;
 const y = import.meta.env.VITE_e2;
@@ -10,6 +10,19 @@ const z = import.meta.env.VITE_e3;
 
 const Production = () => {
   const form = useRef();
+  const [formData, setFormData] = useState({
+    user_name: "",
+    user_email: "",
+    message: "",
+  });
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const { user_name, user_email, message } = formData;
+  const isAnyFieldEmpty = !user_name || !user_email || !message;
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -17,7 +30,7 @@ const Production = () => {
     emailjs.sendForm(x, y, form.current, z).then(
       (result) => {
         console.log(result.text);
-        alert("email sent");
+        alert("Message Sent!");
       },
       (error) => {
         console.log(error.text);
@@ -43,7 +56,11 @@ const Production = () => {
       </p>
 
       {/* Image with grey border */}
-      <img src={a} alt="Production Companies" className="mb-4 w-full border-2 border-gray-400" />
+      <img
+        src={a}
+        alt="Production Companies"
+        className="mb-4 w-full border-2 border-gray-400 h-[1300px] object-cover"
+      />
 
       <h2 className="text-2xl font-semibold mb-4">
         Here are some ways that our footage can be used in your projects:
@@ -61,14 +78,14 @@ const Production = () => {
 
       {/* Embed YouTube Videos */}
 
-      <div className="grid md:grid-cols-2 md:px-10">
+      <div className="grid md:grid-cols-2 md:px-10 gap-10">
         <iframe
-          className="mb-4 md:w-[600px] md:h-96"
+          className="mb-4 md:w-full md:h-96"
           src="https://www.youtube.com/embed/TgLusR6vdH0"
           title="Tag Rugby video"
         ></iframe>
         <iframe
-          className="mb-4 md:w-[600px] md:h-96"
+          className="mb-4 md:w-full md:h-96"
           src="https://www.youtube.com/embed/_4fXCE0YsvQ"
           title="Millennium Point video"
         ></iframe>
@@ -80,37 +97,46 @@ const Production = () => {
           href="#"
           onClick={(e) => {
             e.preventDefault();
-            window.location.href = "mailto:Info@CinematicFPV.co.uk";
+            window.location.href = "mailto:Info@CinematicFPV.co.uk?subject=production";
           }}
         >
           <img src={email} alt="Email us" className="w-52 h-6 inline-block align-text-bottom ml-1" />
         </a>
-        , call us on <img src={phone} className="w-32 h-5 inline-block align-text-bottom ml-1" /> or fill in
-        the form below:
+        , call us on{" "}
+        <a href="https://wa.me/447968033307">
+          <img src={phone} alt="Message us on WhatsApp" className="w-32 h-5 inline-block align-text-bottom" />
+        </a>{" "}
+        or fill in the form below:
       </p>
 
       {/* Contact Form */}
-      <form ref={form} onSubmit={sendEmail} className="mt-4">
-        <div className="mb-4">
+      <form onSubmit={sendEmail} className="mt-4 md:mx-72">
+        <div className={`mb-4 ${user_name ? "" : "border-red-500"}`}>
           <input
             type="text"
             name="user_name"
             placeholder="Your name"
+            value={user_name}
+            onChange={handleInputChange}
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
           />
         </div>
-        <div className="mb-4">
+        <div className={`mb-4 ${user_email ? "" : "border-red-500"}`}>
           <input
             type="email"
             name="user_email"
             placeholder="Your email address"
+            value={user_email}
+            onChange={handleInputChange}
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
           />
         </div>
-        <div className="mb-4">
+        <div className={`mb-4 ${message ? "" : "border-red-500"}`}>
           <textarea
             name="message"
             placeholder="Your message"
+            value={message}
+            onChange={handleInputChange}
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline h-32"
           ></textarea>
         </div>
@@ -118,7 +144,10 @@ const Production = () => {
           <input
             type="submit"
             value="Send"
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-36 md:px-40 rounded focus:outline-none focus:shadow-outline"
+            className={`bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-36 md:px-40 rounded focus:outline-none focus:shadow-outline ${
+              isAnyFieldEmpty ? "cursor-not-allowed opacity-50" : ""
+            }`}
+            disabled={isAnyFieldEmpty}
           />
         </div>
       </form>

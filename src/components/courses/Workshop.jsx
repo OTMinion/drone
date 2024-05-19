@@ -36,7 +36,7 @@ function Workshop() {
     emailjs.sendForm(x, y, form.current, z).then(
       (result) => {
         console.log(result.text);
-        alert("email sent");
+        alert("Message Sent!");
       },
       (error) => {
         console.log(error.text);
@@ -55,12 +55,12 @@ function Workshop() {
       />
 
       {/* Workshop content */}
-      <p className="mb-4">
+      <p>
         Drone technology is forever progressing and as such these amazing machines offer new and unprecedented
         opportunities given their ever increasing capabilities.
       </p>
 
-      <p>
+      <p className="my-4">
         They can be used for all sorts of things, from film making, inspections, deliveries, mapping, and
         agriculture. They fly with precision and can carry various payloads depending on the job they are
         tasked with.
@@ -76,7 +76,7 @@ function Workshop() {
         films.
       </p>
 
-      <p>
+      <p className="my-4">
         With all of this in mind, I offer my knowledge, skills and experience to help people learn and
         understand more about these amazing machines.
       </p>
@@ -124,27 +124,31 @@ function Workshop() {
 
       {/* Testimonial */}
 
-      <h1 className="text-2xl font-semibold mb-4 mt-10">Testimonial</h1>
-      <div className="grid md:grid-cols-10 mb-14">
-        <div className="pl-10 md:pl-0 col-span-8">
-          <img src={howard} className="w-60 h-60 mb-4 rounded" />
-          <cite>Howard Smith, award winning independent filmmaker</cite>
-        </div>
+      <div className="md:x-40 mt-14 ">
+        <h1 className="text-2xl font-semibold mb-4 -mt-4">Testimonial</h1>
+        <div className="grid md:grid-cols-10  mb-14 ">
+          <div className="pl-10 md:pl-0 md:col-span-3 col-span-10">
+            <img src={howard} className="w-60 h-60 mb-4 rounded" />
+            <p className="font-bold text-xl pb-2">Howard Smith</p>
+            <cite>Award winning independent filmmaker</cite>
+          </div>
 
-        <blockquote className="p-4 italic border-l-4 bg-gray-100 text-gray-600 border-gray-500 md:mb-4 col-span-8">
-          <p className="mb-2">
-            “In 2022 I attended a Drone Day Workshop devised and presented by Steve Jakab. This was really
-            interesting, useful and informative, giving a detailed overview of different kinds of drones and
-            their capabilities, along with practical 'hands-on' experience. A total professional, Steve also
-            covers a number of important issues relating to the legality of where and when various kinds of
-            drones can be used. He has a wide range of state-of-the-art drones, some of which he has designed
-            and constructed himself, and the quality of his aerial photography has to be seen to be believed.
-            His enthusiasm for the subject is evident, and his communication skills are superb. The workshop
-            is inspirational, and fully comprehensible for people of all ages. I can wholeheartedly and
-            unreservedly recommend this workshop to anyone and everyone who has any kind of interest in drones
-            or video photography.”
-          </p>
-        </blockquote>
+          <blockquote className="p-4 italic border-l-4 bg-gray-100 text-gray-600 border-gray-500 md:mb-4 col-span-7">
+            <p className="mb-2">
+              “For the past three years I have employed the services of Steve Jakab for aerial photography on
+              films called 'Stockhausen Syndrome', 'Mediation', 'Distraction', 'Pretence' and 'The Killing of
+              Ava Jukes'. Steve has done some extraordinary and brilliant aerial photography for every one of
+              these films using a variety of drones. His enthusiasm for his craft is always evident, as is his
+              expertise. Not only does he create the aerial shots I request, but also he suggests ideas of his
+              own as to what he can achieve above and beyond what I think is possible. Steve is a consummate
+              professional, being a licensed drone operator and having full knowledge of the laws surrounding
+              the use of drones. Whenever permission is needed, he always obtains it well in advance. His
+              aerial shots photography has elevated my films to new heights, and have helped me to win awards
+              at film festivals. I shall be requesting Steve's services again and again, and I unreservedly
+              recommend his services. I genuinely believe he is the best in the business.”
+            </p>
+          </blockquote>
+        </div>
       </div>
 
       {/* Images with pop-up functionality */}
@@ -230,17 +234,20 @@ function Workshop() {
           href="#"
           onClick={(e) => {
             e.preventDefault();
-            window.location.href = "mailto:Info@CinematicFPV.co.uk";
+            window.location.href = "mailto:Info@CinematicFPV.co.uk?subject=Workshop";
           }}
         >
           <img src={email} alt="Email us" className="w-52 h-6 inline-block align-text-bottom ml-1" />
         </a>
-        , call us on <img src={phone} className="w-32 h-5 inline-block align-text-bottom ml-1" /> or fill in
-        the form below:
+        , call us on{" "}
+        <a href="https://wa.me/447968033307">
+          <img src={phone} alt="Message us on WhatsApp" className="w-32 h-5 inline-block align-text-bottom" />
+        </a>{" "}
+        or fill in the form below:
       </p>
 
       {/* Contact Form */}
-      <form ref={form} onSubmit={sendEmail} className="mt-4">
+      <form ref={form} onSubmit={sendEmail} className="mt-4 md:mx-72">
         <div className="mb-4">
           <input
             type="text"

@@ -14,7 +14,7 @@ const Content = () => {
       <hr className="border-t border-gray-400 my-10 w-[85%] mx-auto" />
 
       {/* ABOUT  */}
-      <div className="text-center w-[80%] mx-auto text-gray-600 text-md font-light">
+      <div className="text-center w-[80%] mx-auto  text-md font-light">
         <p className="mt-5">
           Hi there! Are you ready for some aerial footage to sky rocket your message or brand? Our aerial
           filming services can take you to giddy new heights by using cutting edge drone videography to make
@@ -39,10 +39,10 @@ const Content = () => {
       {/* 3 grid section */}
       <div className="grid lg:grid-cols-3 gap-10  text-center md:mx-20 mt-10 ">
         <div className="px-5 pb-10 lg:pb-0">
-          <h1 className="text-2xl font-semibold mb-4">FOR FILM</h1>
+          <h1 className="text-2xl font-semibold mb-4">REAL ESTATE</h1>
           <p className="mb-4 -mx-4">
             Want to show off your house beautifully, inside and out? Let’s do it. Whether it’s to sell, hire
-            out or promote, let’s do it beautifully.
+            out or promote, we can do it beautifully for you.
           </p>
 
           <iframe
@@ -55,7 +55,7 @@ const Content = () => {
           ></iframe>
         </div>
         <div className="md:border-e-2 md:border-l-2 px-5 pb-10 lg:pb-0">
-          <h1 className="text-2xl font-semibold mb-4">REAL ESTATE</h1>
+          <h1 className="text-2xl font-semibold mb-4">FOR FILM</h1>
           <p className="mb-4">
             We love film. Let’s create epic drone videography for your next film, from traditional shots to
             dynamic FPV footage.
@@ -86,7 +86,7 @@ const Content = () => {
         </div>
       </div>
 
-      <div className="flex flex-col md:flex-row md:ml-24 ml-8 mt-32 ">
+      {/* <div className="flex flex-col md:flex-row md:ml-24 ml-8 mt-32 ">
         <p className="pb-2">Other Categories:</p>
         <div className="flex">
           <p className="md:ml-4 group relative cursor-pointer">
@@ -106,14 +106,14 @@ const Content = () => {
             <span className="absolute inset-x-0 top-6 h-[3px] bg-current transform scale-x-0 group-hover:scale-x-[100%] transition-transform "></span>
           </p>
         </div>
-      </div>
+      </div> */}
 
       {/* BLACK SECTION */}
-      <div className="bg-black my-10 h-auto">
+      <div className="bg-black mt-32 mb-10 h-auto">
         <div className="pt-5 pb-10">
           <h1 className="text-center text-white text-6xl font-bold">THE SKY’S THE LIMIT</h1>
-          <p className="text-center text-gray-600 text-lg pb-5 font-light">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit
+          <p className="text-center text-gray-300 text-lg pb-5 font-light">
+            Elevate your videos to new heights!
           </p>
           <iframe
             // width="1120"
@@ -131,8 +131,8 @@ const Content = () => {
       {/* SERVICES SECTION */}
       <div className="flex lg:space-x-4 lg:px-16 flex-col lg:space-y-0 lg:flex-row ">
         <div className="flex-1 px-5">
-          <h1 className="text-4xl font-light text-gray-400">DRONE VIDEOGRAPHY SERVICES</h1>
-          <h2 className="text-4xl ">THE SKY'S THE LIMIT</h2>
+          <h1 className="text-4xl ">DRONE VIDEOGRAPHY SERVICES</h1>
+          <h2 className="text-4xl font-light text-gray-400">THE SKY'S THE LIMIT</h2>
 
           <p className="py-5">
             Cinematic FPV is a specialist Drone filming organisation based in Birmingham with expertise that
@@ -275,21 +275,21 @@ const Content = () => {
         <div className="flex  grid-cols-3 w-4/5 mx-auto mt-16 gap-14 md:flex-row flex-col">
           <div>
             <h1 className="text-lg ">COMPLETE DRONE FILMING SERVICE</h1>
-            <p className="text-gray-400 mt-3 text-left px-6">
+            <p className="mt-5 text-left px-6">
               Briefing, planning, filming, and editing all completed in one place to make the process smooth
               for clients
             </p>
           </div>
           <div>
             <h1 className="text-lg ">ALWAYS ACCESSIBLE TO OUR CLIENTS</h1>
-            <p className="text-gray-400 mt-3 text-left px-4">
+            <p className="mt-5 text-left px-4">
               We’re always available for our clients from planning, filming and editing, and we’re always
               communicating.
             </p>
           </div>
           <div>
             <h1 className="text-lg ">CAA QUALIFIED WITH PUBLIC LIABILITY INSURANCE</h1>
-            <p className="text-gray-400 mt-3 text-left px-6">
+            <p className="mt-5 text-left px-6">
               Our qualifications, insurance and experience ensures you have complete peace of mind while we’re
               filming on site.
             </p>

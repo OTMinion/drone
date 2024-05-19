@@ -16,7 +16,7 @@ const Real_estate = () => {
     emailjs.sendForm(x, y, form.current, z).then(
       (result) => {
         console.log(result.text);
-        alert("email sent");
+        alert("Message Sent!");
       },
       (error) => {
         console.log(error.text);
@@ -52,12 +52,12 @@ const Real_estate = () => {
       </p>
       <div className="mb-4">
         <iframe
-          className="w-full h-[calc(100vw*9/16)]"
-          src="https://www.youtube.com/embed/u7EAcN6DLQE?si=wbu59Wg4DXTb3j3X"
+          src="https://www.youtube.com/embed/uED0dRTZJpw?si=cWrJyq1LvAwEivlQ"
           title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
+          allowfullscreen="true"
+          className="w-full h-[calc(100vw*9/16)]"
         ></iframe>
       </div>
       <p className="mb-4">
@@ -67,17 +67,20 @@ const Real_estate = () => {
           href="#"
           onClick={(e) => {
             e.preventDefault();
-            window.location.href = "mailto:Info@CinematicFPV.co.uk";
+            window.location.href = "mailto:Info@CinematicFPV.co.uk?Real estate";
           }}
         >
           <img src={email} alt="Email us" className="w-52 h-6 inline-block align-text-bottom ml-1" />
         </a>
-        , call us on <img src={phone} className="w-32 h-5 inline-block align-text-bottom ml-1 mr-2" />
+        , call us on{" "}
+        <a href="https://wa.me/447968033307">
+          <img src={phone} alt="Message us on WhatsApp" className="w-32 h-5 inline-block align-text-bottom" />
+        </a>
         or fill in the form below:
       </p>
 
       {/* Contact Form */}
-      <form ref={form} onSubmit={sendEmail} className="mt-4">
+      <form ref={form} onSubmit={sendEmail} className="mt-4 md:mx-72">
         <div className="mb-4">
           <input
             type="text"

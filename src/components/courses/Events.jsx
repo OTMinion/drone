@@ -16,7 +16,7 @@ const Events = () => {
     emailjs.sendForm(x, y, form.current, z).then(
       (result) => {
         console.log(result.text);
-        alert("email sent");
+        alert("Message Sent!");
       },
       (error) => {
         console.log(error.text);
@@ -27,7 +27,8 @@ const Events = () => {
   return (
     <div className="px-8 pt-40">
       <h1 className="text-3xl font-bold mb-6">Events</h1>
-      <img src={a} />
+      <img src={a} className="w-full h-full rounded-md shadow-lg mb-4" />
+      <p className="italic mb-10 text-center text-xl">St. Pat’s Parade in Cannon Hill Park</p>
       <p className="mb-4 mt-4">
         We love filming events. Events are great because they are special and enjoyable occasions where people
         come together in their mutual love of something – for a wedding, to watch a game, to enjoy music or
@@ -78,17 +79,20 @@ const Events = () => {
           href="#"
           onClick={(e) => {
             e.preventDefault();
-            window.location.href = "mailto:Info@CinematicFPV.co.uk";
+            window.location.href = "mailto:Info@CinematicFPV.co.uk?subject=Events";
           }}
         >
           <img src={email} alt="Email us" className="w-52 h-6 inline-block align-text-bottom ml-1" />
         </a>
-        , call us on <img src={phone} className="w-32 h-5 inline-block align-text-bottom ml-1 mr-2" />
+        , call us on{" "}
+        <a href="https://wa.me/447968033307">
+          <img src={phone} alt="Message us on WhatsApp" className="w-32 h-5 inline-block align-text-bottom" />
+        </a>
         or fill in the form below:
       </p>
 
       {/* Contact Form */}
-      <form ref={form} onSubmit={sendEmail} className="mt-4">
+      <form ref={form} onSubmit={sendEmail} className="mt-4 md:mx-72">
         <div className="mb-4">
           <input
             type="text"

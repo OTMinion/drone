@@ -2,6 +2,7 @@ import email from "../../assets/info.png";
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import ReCAPTCHA from "react-google-recaptcha";
+import phone from "../../assets/phone.png";
 
 const API_KEY = import.meta.env.VITE_CAPCHA_API;
 
@@ -21,7 +22,7 @@ const About = () => {
       emailjs.sendForm(x, y, form.current, z).then(
         (result) => {
           console.log(result.text);
-          alert("email sent");
+          alert("Message Sent!");
         },
         (error) => {
           console.log(error.text);
@@ -41,9 +42,9 @@ const About = () => {
       <h1 className="text-3xl font-bold mb-6">About Us</h1>
       <p className="mb-4">
         Cinematic FPV is a novel drone, filming and production organisation that was founded in 2020. We have
-        over <span className="font-semibold">{yearsOfExperience} years’</span> experience flying and filming,
-        and specialise in creating unique, cutting edge and high quality drone videography, tailored videos
-        and high quality productions to meet your needs.
+        over <span>{yearsOfExperience} years’</span> experience flying and filming, and specialise in creating
+        unique, cutting edge and high quality drone videography, tailored videos and high quality productions
+        to meet your needs.
       </p>
       <p className="mb-4">
         Utilising cutting-edge equipment, we have a fleet of over 12 drones, 9 of them purpose built to be
@@ -68,16 +69,20 @@ const About = () => {
           href="#"
           onClick={(e) => {
             e.preventDefault();
-            window.location.href = "mailto:Info@CinematicFPV.co.uk";
+            window.location.href = "mailto:Info@CinematicFPV.co.uk?subject=About";
           }}
           className="inline-block align-middle"
         >
           <img src={email} alt="Email us" className="w-52 h-6 inline-block align-text-bottom mr-1 mb-1" />
         </a>
-        , call us on <span className="font-semibold">07968 033307</span> or fill in the form below:
+        , call us on{" "}
+        <a href="https://wa.me/447968033307">
+          <img src={phone} alt="Message us on WhatsApp" className="w-32 h-5 inline-block align-text-bottom" />
+        </a>{" "}
+        or fill in the form below:
       </p>
 
-      <form ref={form} onSubmit={sendEmail} className="mt-4">
+      <form ref={form} onSubmit={sendEmail} className="mt-4 md:mx-72">
         <div className="mb-4">
           <input
             type="text"

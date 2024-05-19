@@ -6,7 +6,7 @@ const Fpv_drone_filming = () => {
     <div className="px-8 pt-40  min-h-screen">
       <h1 className="text-2xl md:text-4xl font-bold mb-8">FPV Drone Filming</h1>
 
-      <img src={a} alt="FPV Drone" className="w-full h-full object-cover rounded-md shadow-lg mb-4" />
+      <img src={a} alt="FPV Drone" className="w-full h-full rounded-md shadow-lg mb-4" />
 
       <p className="mb-4">
         FPV drone filming (or FPV for short) is new, exciting, and is used to get truly breathtaking and

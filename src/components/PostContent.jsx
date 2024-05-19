@@ -46,7 +46,7 @@ const PostContent = () => {
   }, [slug]);
 
   return (
-    <div className="pt-40 px-32">
+    <div className="pt-40 md:px-32 px-8">
       {loading && "Loading..."}
       {error && <p>Error: {error}</p>}
       {post && (
